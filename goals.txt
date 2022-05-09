@@ -5,8 +5,43 @@ Build remote-controlled, quadcopter
 Requirements:
 	Remote Control Range of >= 200 m
 		Bidirectional radio for telemetry
-	Capable of at least 100 ft altitude
+	Capable of at least 50 ft altitude
+	Stable Hover
+		prioritize stability over speed
 	Bidirectional Serial Interface with connector to add remote control modules
+		Should use UART or SPI as Master
 	Flight time on battery >= 2 mins
-	
+		Track battery life (voltage and total charge dissipated)
 	Radio Controller Capable of displaying small amounts of telemetry
+		Be able to display battery percentage, voltage, altitude
+		
+		
+		
+		
+
+Sensors Needed
+	IMU (9dof) for orientation
+		Bosch and Invensense
+	Altimeter
+		
+	Shunt or Hall Effect to detect current from battery
+		Hall effect sensor will be difficult on PCB
+		Shunt wastes Energy
+			Can use very small shunt resistance with high resolution ADC?
+			Low pass filter of integrate?
+	
+Wireless
+	Wireless connection > 200 m
+		Bluetooth 5.0 Long Range
+		
+Processor
+	Use ARM M4F
+		Plenty sufficient for modified complimentary filter
+	TI has good options
+		TM4C123
+		MSP432
+	ST has higher clock speed options
+		STM32F407
+	
+	
+	
