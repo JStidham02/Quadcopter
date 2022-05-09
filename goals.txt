@@ -1,0 +1,12 @@
+Design Goals:
+
+Build remote-controlled, quadcopter
+
+Requirements:
+	Remote Control Range of >= 200 m
+		Bidirectional radio for telemetry
+	Capable of at least 100 ft altitude
+	Bidirectional Serial Interface with connector to add remote control modules
+	Flight time on battery >= 2 mins
+	
+	Radio Controller Capable of displaying small amounts of telemetry
