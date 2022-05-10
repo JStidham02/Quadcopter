@@ -1,0 +1,18 @@
+ICs + Sensors Needed
+
+TM4C123GH6PM Microcontroller
+3.3 V Voltage Regulator -needs VERY stable voltage from 9-12V in
+ICM-20948 IMU
+ICP-10100 Barometric Pressure Sensor
+CC2640R2F Wireless Connectivity Microcontroller 
+MCP3464R  4 Channel, Differential Input, 16-bit ADC
+
+
+This covers:
+
+Processor
+Wireless
+Orientation
+Altitude
+Battery Monitoring 
+	Current + Voltage
