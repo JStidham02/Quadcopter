@@ -21,27 +21,23 @@ Requirements:
 
 Sensors Needed
 	IMU (9dof) for orientation
-		Bosch and Invensense
+		Use ICM-20948 (should already have one)
+		
 	Altimeter
+		Use Invensense Barometric Pressure Sensor
 		
 	Shunt or Hall Effect to detect current from battery
-		Hall effect sensor will be difficult on PCB
-		Shunt wastes Energy
-			Can use very small shunt resistance with high resolution ADC?
-			Low pass filter of integrate?
+		Use very low resistance Shunt?
+				0.0001 Ohms -> 0.25 watts
 	
 Wireless
 	Wireless connection > 200 m
 		Bluetooth 5.0 Long Range
+		TI CC2640R2F modules are capible of this
 		
 Processor
 	Use ARM M4F
 		Plenty sufficient for modified complimentary filter
-	TI has good options
-		TM4C123
-		MSP432
-	ST has higher clock speed options
-		STM32F407
-	
+		TM4C123 good series with lots of SPIs, UARTs, good DMA, and 80 MHz clock
 	
 	
