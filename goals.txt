@@ -9,9 +9,9 @@ Requirements:
 	Stable Hover
 		prioritize stability over speed
 	Bidirectional Serial Interface with connector to add remote control modules
-		Should use UART or SPI as Master
+		Should use UART or SPI as Master (Or do I2C Scan at startup)
 	Flight time on battery >= 2 mins
-		Track battery life (voltage and total charge dissipated)
+		Track battery life (by voltage or charge dissipated)
 	Radio Controller Capable of displaying small amounts of telemetry
 		Be able to display battery percentage, voltage, altitude
 		
@@ -21,23 +21,21 @@ Requirements:
 
 Sensors Needed
 	IMU (9dof) for orientation
-		Use ICM-20948 (should already have one)
+		Use ICM-20948
 		
 	Altimeter
 		Use Invensense Barometric Pressure Sensor
 		
-	Shunt or Hall Effect to detect current from battery
-		Use very low resistance Shunt?
-				0.0001 Ohms -> 0.25 watts
+	Temperature
+		Use Maxim I2C temperature sensor
 	
 Wireless
 	Wireless connection > 200 m
 		Bluetooth 5.0 Long Range
-		TI CC2640R2F modules are capible of this
+		
 		
 Processor
 	Use ARM M4F
 		Plenty sufficient for modified complimentary filter
-		TM4C123 good series with lots of SPIs, UARTs, good DMA, and 80 MHz clock
 	
 	
