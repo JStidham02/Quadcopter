@@ -1,0 +1,13 @@
+All Reset Pins have proper pullups/pulldowns?
+Power and Debuger don't short?
+Debug connected correctly?
+Board can be powered during debugging?
+No shorts due to too-close components
+All vias reasonable sized?
+All ground connections made?
+All devices connected with correct serial buses?
+Serial pin configurations valid on master IC?
+Board power supply vibration resistant?
+Signal LEDs visible?
+All components connected properly for serial configurations (I2C devices in I2C modes)?
+
