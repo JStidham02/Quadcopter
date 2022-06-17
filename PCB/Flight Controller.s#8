@@ -972,6 +972,91 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="M50-3600542R">
+<packages>
+<package name="HARWIN_M50-3600542R">
+<circle x="-3.61" y="-2.355" radius="0.1" width="0.2" layer="21"/>
+<circle x="-3.61" y="-2.355" radius="0.1" width="0.2" layer="51"/>
+<wire x1="-3.175" y1="1.7" x2="3.175" y2="1.7" width="0.127" layer="51"/>
+<wire x1="-3.175" y1="-1.7" x2="3.175" y2="-1.7" width="0.127" layer="51"/>
+<wire x1="-3.26" y1="1.7" x2="-3.26" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="3.26" y1="1.7" x2="3.26" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-3.425" y1="3.5" x2="3.425" y2="3.5" width="0.05" layer="39"/>
+<wire x1="-3.425" y1="-3.5" x2="3.425" y2="-3.5" width="0.05" layer="39"/>
+<wire x1="-3.425" y1="3.5" x2="-3.425" y2="-3.5" width="0.05" layer="39"/>
+<wire x1="3.425" y1="3.5" x2="3.425" y2="-3.5" width="0.05" layer="39"/>
+<text x="-3.175" y="-4" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<text x="-3.175" y="4" size="1.27" layer="25">&gt;NAME</text>
+<wire x1="-3.175" y1="1.7" x2="-3.175" y2="-1.7" width="0.127" layer="51"/>
+<wire x1="3.175" y1="1.7" x2="3.175" y2="-1.7" width="0.127" layer="51"/>
+<smd name="1" x="-2.54" y="-1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="2" x="-2.54" y="1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="3" x="-1.27" y="-1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="4" x="-1.27" y="1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="5" x="0" y="-1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="6" x="0" y="1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="7" x="1.27" y="-1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="8" x="1.27" y="1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="9" x="2.54" y="-1.94" dx="0.8" dy="2.62" layer="1"/>
+<smd name="10" x="2.54" y="1.94" dx="0.8" dy="2.62" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="M50-3600542R">
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<text x="-7.62" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-12.7" y="5.08" length="middle" direction="pas"/>
+<pin name="2" x="12.7" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="3" x="-12.7" y="2.54" length="middle" direction="pas"/>
+<pin name="4" x="12.7" y="2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="5" x="-12.7" y="0" length="middle" direction="pas"/>
+<pin name="6" x="12.7" y="0" length="middle" direction="pas" rot="R180"/>
+<pin name="7" x="-12.7" y="-2.54" length="middle" direction="pas"/>
+<pin name="8" x="12.7" y="-2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="9" x="-12.7" y="-5.08" length="middle" direction="pas"/>
+<pin name="10" x="12.7" y="-5.08" length="middle" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="M50-3600542R" prefix="J">
+<description>Connector Header Surface Mount 10 position 0.050 Inch (1.27mm)  &lt;a href="https://pricing.snapeda.com/parts/M50-3600542R/Harwin%20Inc./view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="M50-3600542R" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HARWIN_M50-3600542R">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="In Stock"/>
+<attribute name="DESCRIPTION" value=" Connector Header Surface Mount 10 position 0.050 (1.27mm) "/>
+<attribute name="MF" value="Harwin Inc."/>
+<attribute name="MP" value="M50-3600542R"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/M50-3600542R/?ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -998,6 +1083,11 @@
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="J2" library="M50-3600542R" deviceset="M50-3600542R" device=""/>
+<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1056,6 +1146,22 @@
 <instance part="GND6" gate="1" x="254" y="101.6" smashed="yes">
 <attribute name="VALUE" x="251.46" y="99.06" size="1.778" layer="96"/>
 </instance>
+<instance part="J2" gate="G$1" x="317.5" y="73.66" smashed="yes">
+<attribute name="NAME" x="309.88" y="82.55" size="1.778" layer="95"/>
+<attribute name="VALUE" x="309.88" y="63.5" size="1.778" layer="96"/>
+</instance>
+<instance part="P+2" gate="VCC" x="299.72" y="88.9" smashed="yes">
+<attribute name="VALUE" x="297.18" y="86.36" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND7" gate="1" x="294.64" y="60.96" smashed="yes">
+<attribute name="VALUE" x="292.1" y="58.42" size="1.778" layer="96"/>
+</instance>
+<instance part="GND8" gate="1" x="66.04" y="76.2" smashed="yes">
+<attribute name="VALUE" x="63.5" y="73.66" size="1.778" layer="96"/>
+</instance>
+<instance part="GND9" gate="1" x="71.12" y="50.8" smashed="yes">
+<attribute name="VALUE" x="68.58" y="48.26" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1066,6 +1172,12 @@
 <wire x1="-10.16" y1="134.62" x2="-10.16" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U3" gate="A" pin="VIN"/>
 <wire x1="-10.16" y1="114.3" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="304.8" y1="78.74" x2="299.72" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
+<wire x1="299.72" y1="78.74" x2="299.72" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -1224,6 +1336,40 @@
 <wire x1="241.3" y1="106.68" x2="246.38" y2="106.68" width="0.1524" layer="91"/>
 <junction x="246.38" y="106.68"/>
 </segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="3"/>
+<wire x1="304.8" y1="76.2" x2="294.64" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="294.64" y1="76.2" x2="294.64" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="9"/>
+<wire x1="294.64" y1="73.66" x2="294.64" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="68.58" x2="294.64" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="68.58" x2="294.64" y2="68.58" width="0.1524" layer="91"/>
+<junction x="294.64" y="68.58"/>
+<pinref part="J2" gate="G$1" pin="5"/>
+<wire x1="304.8" y1="73.66" x2="294.64" y2="73.66" width="0.1524" layer="91"/>
+<junction x="294.64" y="73.66"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="PS0"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="66.04" y1="78.74" x2="76.2" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="PS1"/>
+<wire x1="76.2" y1="78.74" x2="81.28" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="76.2" x2="76.2" y2="78.74" width="0.1524" layer="91"/>
+<junction x="76.2" y="78.74"/>
+</segment>
+<segment>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="71.12" y1="53.34" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="COM2"/>
+<wire x1="71.12" y1="55.88" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="58.42" x2="81.28" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="COM3"/>
+<wire x1="81.28" y1="55.88" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
+<junction x="71.12" y="55.88"/>
+</segment>
 </net>
 <net name="D-" class="0">
 <segment>
@@ -1261,6 +1407,101 @@
 <pinref part="U2" gate="A" pin="VBUS"/>
 <wire x1="215.9" y1="124.46" x2="215.9" y2="129.54" width="0.1524" layer="91"/>
 <label x="215.9" y="132.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SWDIO" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="330.2" y1="78.74" x2="335.28" y2="78.74" width="0.1524" layer="91"/>
+<label x="335.28" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="A" pin="SWDIO"/>
+<wire x1="241.3" y1="78.74" x2="246.38" y2="78.74" width="0.1524" layer="91"/>
+<label x="246.38" y="78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SWCLK" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="4"/>
+<wire x1="330.2" y1="76.2" x2="335.28" y2="76.2" width="0.1524" layer="91"/>
+<label x="335.28" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="A" pin="SWDCLK"/>
+<wire x1="241.3" y1="81.28" x2="246.38" y2="81.28" width="0.1524" layer="91"/>
+<label x="246.38" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SWO" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="6"/>
+<wire x1="330.2" y1="73.66" x2="335.28" y2="73.66" width="0.1524" layer="91"/>
+<label x="335.28" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_8/P1.00/TRACE_D0/SWO"/>
+<wire x1="175.26" y1="96.52" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
+<label x="167.64" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="NC1" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="8"/>
+<wire x1="330.2" y1="71.12" x2="335.28" y2="71.12" width="0.1524" layer="91"/>
+<label x="335.28" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="NRESET" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="10"/>
+<wire x1="330.2" y1="68.58" x2="335.28" y2="68.58" width="0.1524" layer="91"/>
+<label x="335.28" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="A" pin="RESET_N"/>
+<wire x1="241.3" y1="86.36" x2="246.38" y2="86.36" width="0.1524" layer="91"/>
+<label x="246.38" y="86.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="NC2" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="7"/>
+<wire x1="304.8" y1="71.12" x2="302.26" y2="71.12" width="0.1524" layer="91"/>
+<label x="299.72" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BNO_INT" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="INT"/>
+<wire x1="121.92" y1="68.58" x2="127" y2="68.58" width="0.1524" layer="91"/>
+<label x="127" y="68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCL_IMU" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="COM1"/>
+<wire x1="81.28" y1="60.96" x2="76.2" y2="60.96" width="0.1524" layer="91"/>
+<label x="68.58" y="60.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SDA_IMU" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="COM0"/>
+<wire x1="81.28" y1="63.5" x2="76.2" y2="63.5" width="0.1524" layer="91"/>
+<label x="68.58" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="NRESET"/>
+<wire x1="81.28" y1="71.12" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="NBOOT_LOAD_PIN"/>
+<wire x1="81.28" y1="66.04" x2="76.2" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
