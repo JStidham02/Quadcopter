@@ -10,4 +10,5 @@ Serial pin configurations valid on master IC?
 Board power supply vibration resistant?
 Signal LEDs visible?
 All components connected properly for serial configurations (I2C devices in I2C modes)?
+I2C Pulls ups?
 
