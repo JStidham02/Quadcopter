@@ -3,9 +3,8 @@ ICs + Sensors Needed
 
 NINA B306-01B Arm M4f, PWM, Bluetooth LE			(Digikey)					
 LMS8117ADT-3.3/NOPB 3.3 Voltage Regulator			(Mouser)
-ICM-20948 IMU							(Already Have One)
-ICP-10100 Barometric Pressure Sensor				(Mouser)	
-MAX31726 Board Mount Temperature Sensor			(Mouser)														
+Bosch BNO055							(Already Have One)
+BMP390 Barometric Pressure Sensor				(Mouser)															
 
 
 This covers:
@@ -14,6 +13,6 @@ Processor (Nina B306) - Cortex M4F
 Wireless (Bluetooth 5.2 Long Range)
 Orientation (IMU + processor for sensor fusion)
 Altitude (pressure sensor)
-Temperature (temp sensor)
-Motor Control (PWM output to Brushless DC motor controllers)
+Temperature (NINA built into nRF chip)
+Motor Control (PWM output to Brushless DC motor controllers, from Nina)
 Battery Monitoring (voltage)
