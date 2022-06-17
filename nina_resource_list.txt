@@ -1,0 +1,7 @@
+PWM: 4x channels for motor control (all at same freuency)
+USB: 1x channel for bootloader
+I2C: 2x channel (IMU, Pressure)
+SPI: 2x channels shared hardware with I2C
+UART: 2x channels for additional I/O
+
+
