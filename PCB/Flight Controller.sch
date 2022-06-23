@@ -5689,19 +5689,19 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="VDD9" gate="G$1" x="299.72" y="88.9" smashed="yes">
 <attribute name="VALUE" x="297.18" y="86.36" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R3" gate="G$1" x="276.86" y="48.26" smashed="yes" rot="R90">
-<attribute name="NAME" x="275.3614" y="44.45" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="280.162" y="44.45" size="1.778" layer="96" rot="R90"/>
+<instance part="R3" gate="G$1" x="287.02" y="48.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="285.5214" y="44.45" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="290.322" y="44.45" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R4" gate="G$1" x="259.08" y="50.8" smashed="yes" rot="R90">
-<attribute name="NAME" x="257.5814" y="52.07" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="264.922" y="52.07" size="1.778" layer="96" rot="R90"/>
+<instance part="R4" gate="G$1" x="269.24" y="50.8" smashed="yes" rot="R90">
+<attribute name="NAME" x="267.7414" y="52.07" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="275.082" y="52.07" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="VDD10" gate="G$1" x="259.08" y="60.96" smashed="yes">
-<attribute name="VALUE" x="256.54" y="58.42" size="1.778" layer="96" rot="R90"/>
+<instance part="VDD10" gate="G$1" x="269.24" y="60.96" smashed="yes">
+<attribute name="VALUE" x="266.7" y="58.42" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="VDD11" gate="G$1" x="276.86" y="60.96" smashed="yes">
-<attribute name="VALUE" x="274.32" y="58.42" size="1.778" layer="96" rot="R90"/>
+<instance part="VDD11" gate="G$1" x="287.02" y="60.96" smashed="yes">
+<attribute name="VALUE" x="284.48" y="58.42" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -5789,12 +5789,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="259.08" y1="55.88" x2="259.08" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="55.88" x2="269.24" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="VDD10" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="276.86" y1="53.34" x2="276.86" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="53.34" x2="287.02" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="VDD11" gate="G$1" pin="VDD"/>
 </segment>
 </net>
@@ -6070,9 +6070,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="GPIO_52/P0.19/QSPI_CLK"/>
-<wire x1="241.3" y1="43.18" x2="276.86" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="43.18" x2="287.02" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<label x="271.78" y="40.64" size="1.778" layer="95"/>
+<label x="281.94" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA_IMU" class="0">
@@ -6083,9 +6083,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="GPIO_51/P0.17/QSPI_CS"/>
-<wire x1="241.3" y1="45.72" x2="259.08" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="45.72" x2="269.24" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<label x="251.46" y="45.72" size="1.778" layer="95"/>
+<label x="261.62" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK_AUX" class="0">
@@ -6126,6 +6126,62 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="J2" gate="G$1" pin="9"/>
 <wire x1="304.8" y1="68.58" x2="302.26" y2="68.58" width="0.1524" layer="91"/>
 <label x="299.72" y="68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART1_TX" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_3/P0.15"/>
+<wire x1="175.26" y1="106.68" x2="170.18" y2="106.68" width="0.1524" layer="91"/>
+<label x="162.56" y="106.68" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART1_RX" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_4/P0.16"/>
+<wire x1="175.26" y1="104.14" x2="170.18" y2="104.14" width="0.1524" layer="91"/>
+<label x="162.56" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART2_TX" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_43/P0.06"/>
+<wire x1="175.26" y1="40.64" x2="170.18" y2="40.64" width="0.1524" layer="91"/>
+<label x="162.56" y="40.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART2_RX" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_44/P0.27"/>
+<wire x1="175.26" y1="38.1" x2="170.18" y2="38.1" width="0.1524" layer="91"/>
+<label x="162.56" y="38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PWM0" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_47/P0.23/QSPI_D3"/>
+<wire x1="241.3" y1="55.88" x2="246.38" y2="55.88" width="0.1524" layer="91"/>
+<label x="246.38" y="55.88" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PWM1" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_48/P0.21/QSPI_D1"/>
+<wire x1="241.3" y1="53.34" x2="246.38" y2="53.34" width="0.1524" layer="91"/>
+<label x="246.38" y="53.34" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PWM2" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_49/P0.22/QSPI_D2"/>
+<wire x1="241.3" y1="50.8" x2="246.38" y2="50.8" width="0.1524" layer="91"/>
+<label x="246.38" y="50.8" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PWM3" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="GPIO_50/P0.20/QSPI_D0"/>
+<wire x1="241.3" y1="48.26" x2="246.38" y2="48.26" width="0.1524" layer="91"/>
+<label x="246.38" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
