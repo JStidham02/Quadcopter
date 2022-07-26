@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="no" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="no" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="no" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="no" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="no" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="no" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,12 +53,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -416,69 +416,6 @@
 <attribute name="MANUFACTURER" value="u-blox"/>
 <attribute name="PART_DESCRIPTION" value="Stand-alone Bluetooth low energy module"/>
 <attribute name="VALUE" value="NINA-B306"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="LMS8117ADT-3.3">
-<packages>
-<package name="TO457P970X238-3N">
-<wire x1="-1.8542" y1="-3.048" x2="-2.7178" y2="-3.048" width="0.1524" layer="51"/>
-<wire x1="-2.7178" y1="-3.048" x2="-2.7178" y2="-6.8072" width="0.1524" layer="51"/>
-<wire x1="-2.7178" y1="-6.8072" x2="-1.8542" y2="-6.8072" width="0.1524" layer="51"/>
-<wire x1="-1.8542" y1="-6.8072" x2="-1.8542" y2="-3.048" width="0.1524" layer="51"/>
-<wire x1="2.7178" y1="-3.048" x2="1.8542" y2="-3.048" width="0.1524" layer="51"/>
-<wire x1="1.8542" y1="-3.048" x2="1.8542" y2="-6.8072" width="0.1524" layer="51"/>
-<wire x1="1.8542" y1="-6.8072" x2="2.7178" y2="-6.8072" width="0.1524" layer="51"/>
-<wire x1="2.7178" y1="-6.8072" x2="2.7178" y2="-3.048" width="0.1524" layer="51"/>
-<wire x1="-3.302" y1="-3.048" x2="3.302" y2="-3.048" width="0.1524" layer="51"/>
-<wire x1="3.302" y1="-3.048" x2="3.302" y2="3.048" width="0.1524" layer="51"/>
-<wire x1="3.302" y1="3.048" x2="-3.302" y2="3.048" width="0.1524" layer="51"/>
-<wire x1="-3.302" y1="3.048" x2="-3.302" y2="-3.048" width="0.1524" layer="51"/>
-<text x="-4.47533125" y="4.04305" size="2.0851" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-5.8003" y="-9.89611875" size="2.08606875" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
-<smd name="1" x="-2.286" y="-6.5532" dx="0.889" dy="1.2192" layer="1"/>
-<smd name="2" x="2.286" y="-6.5532" dx="0.889" dy="1.2192" layer="1"/>
-<smd name="3" x="0" y="0.1524" dx="6.5786" dy="6.4008" layer="1"/>
-</package>
-</packages>
-<symbols>
-<symbol name="LMS8117ADT-3.3">
-<wire x1="-12.7" y1="5.08" x2="-12.7" y2="-10.16" width="0.4064" layer="94"/>
-<wire x1="-12.7" y1="-10.16" x2="12.7" y2="-10.16" width="0.4064" layer="94"/>
-<wire x1="12.7" y1="-10.16" x2="12.7" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="12.7" y1="5.08" x2="-12.7" y2="5.08" width="0.4064" layer="94"/>
-<text x="-4.95818125" y="6.91603125" size="2.08498125" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-6.55365" y="-13.3613" size="2.082940625" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
-<pin name="VIN" x="-17.78" y="0" length="middle" direction="pwr"/>
-<pin name="GND" x="-17.78" y="-5.08" length="middle" direction="pas"/>
-<pin name="VOUT" x="17.78" y="0" length="middle" direction="out" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="LMS8117ADT-3.3" prefix="U">
-<description>Low-Dropout Linear Regulator </description>
-<gates>
-<gate name="A" symbol="LMS8117ADT-3.3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TO457P970X238-3N">
-<connects>
-<connect gate="A" pin="GND" pad="2"/>
-<connect gate="A" pin="VIN" pad="3"/>
-<connect gate="A" pin="VOUT" pad="1"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value=" 1-A, 15-V, linear voltage regulator from 0°C to 125°C "/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="2156-LMS8117ADT-3.3/NOPB-TI-ND"/>
-<attribute name="MF" value="Texas Instruments"/>
-<attribute name="MP" value="LMS8117ADT-3.3/NOPB"/>
-<attribute name="PACKAGE" value="TO-252-3 Texas Instruments"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/LMS8117ADT-3.3/NOPB/?ref=eda"/>
 </technology>
 </technologies>
 </device>
@@ -11199,6 +11136,81 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="LMS8117AMP-3.3_NOPB">
+<packages>
+<package name="SOT230P700X180-4N">
+<circle x="-4.6" y="2.3" radius="0.1" width="0.2" layer="21"/>
+<circle x="-4.6" y="2.3" radius="0.1" width="0.2" layer="51"/>
+<wire x1="1.75" y1="3.25" x2="1.75" y2="-3.25" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="3.25" x2="-1.75" y2="-3.25" width="0.127" layer="51"/>
+<wire x1="1.75" y1="3.25" x2="1.75" y2="2.01" width="0.127" layer="21"/>
+<wire x1="1.75" y1="3.25" x2="-1.75" y2="3.25" width="0.127" layer="51"/>
+<wire x1="1.75" y1="-3.25" x2="-1.75" y2="-3.25" width="0.127" layer="51"/>
+<text x="-3.2" y="-3.73" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<text x="-3.2" y="4.119" size="1.27" layer="25">&gt;NAME</text>
+<wire x1="-1.75" y1="3.25" x2="1.75" y2="3.25" width="0.127" layer="21"/>
+<wire x1="1.75" y1="-3.25" x2="1.75" y2="-2.01" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="-3.25" x2="1.75" y2="-3.25" width="0.127" layer="21"/>
+<wire x1="4.225" y1="1.875" x2="2" y2="1.875" width="0.05" layer="39"/>
+<wire x1="2" y1="1.875" x2="2" y2="3.5" width="0.05" layer="39"/>
+<wire x1="2" y1="3.5" x2="-2" y2="3.5" width="0.05" layer="39"/>
+<wire x1="-2" y1="3.5" x2="-2" y2="3.025" width="0.05" layer="39"/>
+<wire x1="-2" y1="3.025" x2="-4.225" y2="3.025" width="0.05" layer="39"/>
+<wire x1="-4.225" y1="3.025" x2="-4.225" y2="-3.025" width="0.05" layer="39"/>
+<wire x1="-4.225" y1="-3.025" x2="-2" y2="-3.025" width="0.05" layer="39"/>
+<wire x1="-2" y1="-3.025" x2="-2" y2="-3.5" width="0.05" layer="39"/>
+<wire x1="-2" y1="-3.5" x2="2" y2="-3.5" width="0.05" layer="39"/>
+<wire x1="2" y1="-3.5" x2="2" y2="-1.875" width="0.05" layer="39"/>
+<wire x1="2" y1="-1.875" x2="4.225" y2="-1.875" width="0.05" layer="39"/>
+<wire x1="4.225" y1="-1.875" x2="4.225" y2="1.875" width="0.05" layer="39"/>
+<smd name="1" x="-2.9" y="2.3" dx="0.95" dy="2.15" layer="1" rot="R270"/>
+<smd name="2" x="-2.9" y="0" dx="0.95" dy="2.15" layer="1" rot="R270"/>
+<smd name="3" x="-2.9" y="-2.3" dx="0.95" dy="2.15" layer="1" rot="R270"/>
+<smd name="4" x="2.9" y="0" dx="3.25" dy="2.15" layer="1" rot="R270"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LMS8117AMP-3.3/NOPB">
+<wire x1="-12.7" y1="5.08" x2="12.7" y2="5.08" width="0.41" layer="94"/>
+<wire x1="12.7" y1="5.08" x2="12.7" y2="-5.08" width="0.41" layer="94"/>
+<wire x1="12.7" y1="-5.08" x2="-12.7" y2="-5.08" width="0.41" layer="94"/>
+<wire x1="-12.7" y1="-5.08" x2="-12.7" y2="5.08" width="0.41" layer="94"/>
+<text x="-12.7" y="6.08" size="2.0828" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-12.7" y="-9.08" size="2.0828" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
+<pin name="IN" x="-17.78" y="2.54" length="middle" direction="in"/>
+<pin name="OUT" x="17.78" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="GND" x="17.78" y="-2.54" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LMS8117AMP-3.3/NOPB" prefix="U">
+<description> &lt;a href="https://pricing.snapeda.com/parts/LMS8117AMP-3.3/NOPB/Texas%20Instruments/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="LMS8117AMP-3.3/NOPB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT230P700X180-4N">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="IN" pad="3"/>
+<connect gate="G$1" pin="OUT" pad="2 4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="In Stock"/>
+<attribute name="DESCRIPTION" value=" 1-A, 15-V, linear voltage regulator from 0°C to 125°C "/>
+<attribute name="MF" value="Texas Instruments"/>
+<attribute name="MP" value="LMS8117AMP-3.3/NOPB"/>
+<attribute name="PACKAGE" value="SOT-223-4 Texas Instruments"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/LMS8117AMP-3.3/NOPB/?ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11210,7 +11222,6 @@ Source: www.kingbright.com</description>
 </classes>
 <parts>
 <part name="U2" library="ubloxLib" library_urn="urn:adsk.eagle:library:35818950" deviceset="NINA-B306" device="NINA-B306_NINA_LGA71R_1500X1000X223_PCB" package3d_urn="urn:adsk.eagle:package:35819087/1" value="NINA-B306"/>
-<part name="U3" library="LMS8117ADT-3.3" deviceset="LMS8117ADT-3.3" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U1" library="BMP390L" deviceset="BMP390L" device=""/>
@@ -11277,6 +11288,7 @@ Source: www.kingbright.com</description>
 <part name="JP5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="U5" library="LMS8117AMP-3.3_NOPB" deviceset="LMS8117AMP-3.3/NOPB" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11287,15 +11299,11 @@ Source: www.kingbright.com</description>
 <attribute name="VALUE" x="236.22" y="119.38" size="1.27" layer="96" align="bottom-right"/>
 <attribute name="NAME" x="241.808" y="119.38" size="1.27" layer="95"/>
 </instance>
-<instance part="U3" gate="A" x="40.64" y="114.3" smashed="yes">
-<attribute name="NAME" x="35.68181875" y="121.21603125" size="2.08498125" layer="95" ratio="10" rot="SR0"/>
-<attribute name="VALUE" x="34.08635" y="100.9387" size="2.082940625" layer="96" ratio="10" rot="SR0"/>
-</instance>
 <instance part="P+1" gate="VCC" x="-10.16" y="137.16" smashed="yes">
 <attribute name="VALUE" x="-12.7" y="134.62" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND1" gate="1" x="12.7" y="93.98" smashed="yes">
-<attribute name="VALUE" x="10.16" y="91.44" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="58.42" y="91.44" smashed="yes">
+<attribute name="VALUE" x="55.88" y="88.9" size="1.778" layer="96"/>
 </instance>
 <instance part="U1" gate="G$1" x="109.22" y="147.32" smashed="yes">
 <attribute name="NAME" x="99.06" y="161.29" size="1.778" layer="95"/>
@@ -11515,6 +11523,10 @@ Source: www.kingbright.com</description>
 <instance part="GND24" gate="1" x="101.6" y="93.98" smashed="yes">
 <attribute name="VALUE" x="99.06" y="91.44" size="1.778" layer="96"/>
 </instance>
+<instance part="U5" gate="G$1" x="40.64" y="111.76" smashed="yes">
+<attribute name="NAME" x="27.94" y="117.84" size="2.0828" layer="95" ratio="10" rot="SR0"/>
+<attribute name="VALUE" x="27.94" y="102.68" size="2.0828" layer="96" ratio="10" rot="SR0"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11523,11 +11535,11 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="-10.16" y1="134.62" x2="-10.16" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="U3" gate="A" pin="VIN"/>
 <wire x1="-10.16" y1="114.3" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="114.3" x2="-10.16" y2="109.22" width="0.1524" layer="91"/>
 <junction x="-10.16" y="114.3"/>
+<pinref part="U5" gate="G$1" pin="IN"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
@@ -11642,19 +11654,18 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="106.68" x2="68.58" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="U3" gate="A" pin="VOUT"/>
 <wire x1="68.58" y1="114.3" x2="58.42" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="114.3" x2="68.58" y2="119.38" width="0.1524" layer="91"/>
 <junction x="68.58" y="114.3"/>
 <pinref part="VDD1" gate="G$1" pin="VDD"/>
+<pinref part="U5" gate="G$1" pin="OUT"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="U3" gate="A" pin="GND"/>
-<wire x1="22.86" y1="109.22" x2="12.7" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="12.7" y1="109.22" x2="12.7" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="109.22" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U5" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VSS"/>
@@ -12238,6 +12249,68 @@ Source: www.kingbright.com</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,231.14,12.7,U2,EGP67,GND,,,"/>
+<approved hash="104,1,228.6,12.7,U2,EGP66,GND,,,"/>
+<approved hash="104,1,226.06,12.7,U2,EGP65,GND,,,"/>
+<approved hash="104,1,223.52,12.7,U2,EGP64,GND,,,"/>
+<approved hash="104,1,220.98,12.7,U2,EGP63,GND,,,"/>
+<approved hash="104,1,218.44,12.7,U2,EGP62,GND,,,"/>
+<approved hash="104,1,215.9,12.7,U2,EGP61,GND,,,"/>
+<approved hash="104,1,213.36,12.7,U2,EGP60,GND,,,"/>
+<approved hash="104,1,210.82,12.7,U2,EGP59,GND,,,"/>
+<approved hash="104,1,208.28,12.7,U2,EGP58,GND,,,"/>
+<approved hash="104,1,205.74,12.7,U2,EGP57,GND,,,"/>
+<approved hash="104,1,203.2,12.7,U2,EGP56,GND,,,"/>
+<approved hash="104,1,241.3,101.6,U2,EAGP71,GND,,,"/>
+<approved hash="104,1,241.3,104.14,U2,EAGP70,GND,,,"/>
+<approved hash="104,1,241.3,106.68,U2,EAGP69,GND,,,"/>
+<approved hash="104,1,241.3,109.22,U2,EAGP68,GND,,,"/>
+<approved hash="104,1,193.04,12.7,U2,GND26,GND,,,"/>
+<approved hash="104,1,190.5,12.7,U2,GND14,GND,,,"/>
+<approved hash="104,1,187.96,12.7,U2,GND12,GND,,,"/>
+<approved hash="104,1,185.42,12.7,U2,GND6,GND,,,"/>
+<approved hash="104,1,198.12,12.7,U2,GND53,GND,,,"/>
+<approved hash="104,1,195.58,12.7,U2,GND30,GND,,,"/>
+<approved hash="104,1,205.74,124.46,U2,VCC_IO,VDD,,,"/>
+<approved hash="104,1,210.82,124.46,U2,VCC,VDD,,,"/>
+<approved hash="104,1,124.46,154.94,U1,VDDIO,VDD,,,"/>
+<approved hash="104,1,124.46,139.7,U1,VSS,GND,,,"/>
+<approved hash="204,1,121.92,60.96,U4,PIN10,,,,"/>
+<approved hash="104,1,121.92,58.42,U4,PIN15,GND,,,"/>
+<approved hash="104,1,121.92,55.88,U4,PIN16,GND,,,"/>
+<approved hash="104,1,121.92,53.34,U4,GNDIO,GND,,,"/>
+<approved hash="202,1,81.28,73.66,U4,XIN32,,,,"/>
+<approved hash="104,1,121.92,76.2,U4,VDDIO,VDD,,,"/>
+<approved hash="106,1,330.2,71.12,NC1,,,,,"/>
+<approved hash="106,1,304.8,71.12,NC2,,,,,"/>
+<approved hash="106,1,304.8,68.58,NC3,,,,,"/>
+<approved hash="206,1,93.98,142.24,VDD,,,,,"/>
+<approved hash="206,1,58.42,114.3,VDD,,,,,"/>
+<approved hash="208,1,127,162.56,VDD,sup,,,,"/>
+<approved hash="208,1,210.82,134.62,VDD,sup,,,,"/>
+<approved hash="208,1,127,86.36,VDD,sup,,,,"/>
+<approved hash="208,1,58.42,71.12,VDD,sup,,,,"/>
+<approved hash="208,1,78.74,154.94,VDD,sup,,,,"/>
+<approved hash="208,1,93.98,142.24,VDD,out,,,,"/>
+<approved hash="208,1,142.24,124.46,VDD,sup,,,,"/>
+<approved hash="208,1,170.18,124.46,VDD,sup,,,,"/>
+<approved hash="208,1,299.72,86.36,VDD,sup,,,,"/>
+<approved hash="208,1,269.24,58.42,VDD,sup,,,,"/>
+<approved hash="208,1,287.02,58.42,VDD,sup,,,,"/>
+<approved hash="208,1,259.08,185.42,VDD,sup,,,,"/>
+<approved hash="208,1,139.7,162.56,VDD,sup,,,,"/>
+<approved hash="208,1,68.58,119.38,VDD,sup,,,,"/>
+<approved hash="208,1,58.42,114.3,VDD,out,,,,"/>
+<approved hash="113,1,259.402,162.231,BRD_PWR,,,,,"/>
+<approved hash="113,1,274.642,162.584,NINA_PWR,,,,,"/>
+<approved hash="113,1,289.882,162.726,BLE_CONN,,,,,"/>
+<approved hash="113,1,48.4861,139.463,JP1,,,,,"/>
+<approved hash="113,1,340.597,142.466,JP2,,,,,"/>
+<approved hash="113,1,340.597,124.686,JP3,,,,,"/>
+<approved hash="113,1,93.7429,120.424,JP4,,,,,"/>
+<approved hash="113,1,93.7429,100.104,JP5,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

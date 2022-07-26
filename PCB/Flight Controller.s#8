@@ -11152,6 +11152,8 @@ Source: www.kingbright.com</description>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="10k"/>
+<part name="VDD14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11376,6 +11378,13 @@ Source: www.kingbright.com</description>
 <instance part="GND22" gate="1" x="314.96" y="114.3" smashed="yes">
 <attribute name="VALUE" x="312.42" y="111.76" size="1.778" layer="96"/>
 </instance>
+<instance part="R8" gate="G$1" x="274.32" y="114.3" smashed="yes" rot="R90">
+<attribute name="NAME" x="272.8214" y="115.57" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="280.162" y="115.57" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="VDD14" gate="G$1" x="274.32" y="127" smashed="yes">
+<attribute name="VALUE" x="271.78" y="124.46" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11505,6 +11514,11 @@ Source: www.kingbright.com</description>
 <wire x1="139.7" y1="154.94" x2="124.46" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="162.56" x2="139.7" y2="154.94" width="0.1524" layer="91"/>
 <junction x="139.7" y="154.94"/>
+</segment>
+<segment>
+<pinref part="VDD14" gate="G$1" pin="VDD"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="274.32" y1="124.46" x2="274.32" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -11841,6 +11855,11 @@ Source: www.kingbright.com</description>
 <pinref part="U2" gate="A" pin="RESET_N"/>
 <wire x1="241.3" y1="86.36" x2="246.38" y2="86.36" width="0.1524" layer="91"/>
 <label x="246.38" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="274.32" y1="109.22" x2="274.32" y2="104.14" width="0.1524" layer="91"/>
+<label x="276.86" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NC2" class="0">
