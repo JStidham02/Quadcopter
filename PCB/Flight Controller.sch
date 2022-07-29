@@ -12305,11 +12305,11 @@ Source: www.kingbright.com</description>
 <approved hash="113,1,259.402,162.231,BRD_PWR,,,,,"/>
 <approved hash="113,1,274.642,162.584,NINA_PWR,,,,,"/>
 <approved hash="113,1,289.882,162.726,BLE_CONN,,,,,"/>
-<approved hash="113,1,48.4861,139.463,JP1,,,,,"/>
-<approved hash="113,1,340.597,142.466,JP2,,,,,"/>
-<approved hash="113,1,340.597,124.686,JP3,,,,,"/>
-<approved hash="113,1,93.7429,120.424,JP4,,,,,"/>
-<approved hash="113,1,93.7429,100.104,JP5,,,,,"/>
+<approved hash="113,1,48.4556,139.463,JP1,,,,,"/>
+<approved hash="113,1,340.597,142.436,JP2,,,,,"/>
+<approved hash="113,1,340.597,124.656,JP3,,,,,"/>
+<approved hash="113,1,93.7429,120.454,JP4,,,,,"/>
+<approved hash="113,1,93.7429,100.134,JP5,,,,,"/>
 </errors>
 </schematic>
 </drawing>
