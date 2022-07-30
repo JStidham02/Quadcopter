@@ -8,7 +8,7 @@ set(CPU_PARAMETERS
 	-mlittle-endian
 )
 
-set(STARTUP_SCRIPT ./Startup/startup.s)
+set(STARTUP_SCRIPT ./Startup/gcc_startup_nrf52840.S)
 set(MCU_LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/Include/link_full.ld)
 
 set(TOOLCHAIN_DIR /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/arm-none-eabi/)
@@ -31,7 +31,7 @@ set(PROJECT_INCLUDE_DIRECTORIES
 file(GLOB_RECURSE PROJECT_SOURCES FOLLOW_SYMLINKS
 	${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/*.c
-	${CMAKE_CURRENT_SOURCE_DIR}/*.s
+	${CMAKE_CURRENT_SOURCE_DIR}/*.S
 )
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES} ${STARTUP_SCRIPT})

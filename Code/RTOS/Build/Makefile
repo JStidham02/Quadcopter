@@ -123,14 +123,41 @@ RTOS/fast:
 	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/build
 .PHONY : RTOS/fast
 
-Startup/startup.obj: Startup/startup.s.obj
+Startup/gcc_startup_nrf52840.obj: Startup/gcc_startup_nrf52840.S.obj
 
-.PHONY : Startup/startup.obj
+.PHONY : Startup/gcc_startup_nrf52840.obj
 
 # target to build an object file
-Startup/startup.s.obj:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/startup.s.obj
-.PHONY : Startup/startup.s.obj
+Startup/gcc_startup_nrf52840.S.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
+.PHONY : Startup/gcc_startup_nrf52840.S.obj
+
+Startup/startup_config.obj: Startup/startup_config.c.obj
+
+.PHONY : Startup/startup_config.obj
+
+# target to build an object file
+Startup/startup_config.c.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
+.PHONY : Startup/startup_config.c.obj
+
+Startup/startup_config.i: Startup/startup_config.c.i
+
+.PHONY : Startup/startup_config.i
+
+# target to preprocess a source file
+Startup/startup_config.c.i:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/startup_config.c.i
+.PHONY : Startup/startup_config.c.i
+
+Startup/startup_config.s: Startup/startup_config.c.s
+
+.PHONY : Startup/startup_config.s
+
+# target to generate assembly for a file
+Startup/startup_config.c.s:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/startup_config.c.s
+.PHONY : Startup/startup_config.c.s
 
 main.obj: main.c.obj
 
@@ -168,7 +195,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RTOS"
-	@echo "... Startup/startup.obj"
+	@echo "... Startup/gcc_startup_nrf52840.obj"
+	@echo "... Startup/startup_config.obj"
+	@echo "... Startup/startup_config.i"
+	@echo "... Startup/startup_config.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

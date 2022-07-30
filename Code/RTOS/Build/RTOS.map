@@ -40,9 +40,11 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
  .data          0x0000000000000000        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
  .bss           0x0000000000000000        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
- .text          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/startup.s.obj
- .data          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/startup.s.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/startup.s.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/main.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/main.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/main.c.obj
@@ -68,40 +70,104 @@ RAM              0x0000000020005978 0x000000000003a688 xrw
 Linker script and memory map
 
 
-.text           0x0000000000027000      0x1b0
+.text           0x0000000000027000      0x448
  *(.isr_vector)
+ .isr_vector    0x0000000000027000      0x200 CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
+                0x0000000000027000                __isr_vector
  *(.text*)
  .text.deregister_tm_clones
-                0x0000000000027000       0x1c /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000000027200       0x1c /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .text.register_tm_clones
-                0x000000000002701c       0x24 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x000000000002721c       0x24 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .text.__do_global_dtors_aux
-                0x0000000000027040       0x28 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000000027240       0x28 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .text.frame_dummy
-                0x0000000000027068       0x24 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .text          0x000000000002708c       0x7c /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
-                0x000000000002708c                _stack_init
-                0x0000000000027094                _mainCRTStartup
-                0x0000000000027094                _start
- .text.exit     0x0000000000027108       0x28 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
-                0x0000000000027108                exit
+                0x0000000000027268       0x24 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .text          0x000000000002728c       0x7c /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+                0x000000000002728c                _stack_init
+                0x0000000000027294                _mainCRTStartup
+                0x0000000000027294                _start
+ .text.exit     0x0000000000027308       0x28 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+                0x0000000000027308                exit
  .text.__libc_init_array
-                0x0000000000027130       0x48 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
-                0x0000000000027130                __libc_init_array
- .text.memset   0x0000000000027178       0x10 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
-                0x0000000000027178                memset
- .text.main     0x0000000000027188        0x4 CMakeFiles/RTOS.dir/main.c.obj
-                0x0000000000027188                main
- .text._exit    0x000000000002718c        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
-                0x000000000002718c                _exit
+                0x0000000000027330       0x48 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+                0x0000000000027330                __libc_init_array
+ .text.memset   0x0000000000027378       0x10 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+                0x0000000000027378                memset
+ .text          0x0000000000027388       0x3c CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
+                0x0000000000027388                Reset_Handler
+                0x00000000000273b0                NMI_Handler
+                0x00000000000273b2                HardFault_Handler
+                0x00000000000273b4                MemoryManagement_Handler
+                0x00000000000273b6                BusFault_Handler
+                0x00000000000273b8                UsageFault_Handler
+                0x00000000000273ba                SVC_Handler
+                0x00000000000273bc                DebugMon_Handler
+                0x00000000000273be                PendSV_Handler
+                0x00000000000273c0                SysTick_Handler
+                0x00000000000273c2                TIMER2_IRQHandler
+                0x00000000000273c2                RTC0_IRQHandler
+                0x00000000000273c2                SWI0_EGU0_IRQHandler
+                0x00000000000273c2                SWI2_EGU2_IRQHandler
+                0x00000000000273c2                GPIOTE_IRQHandler
+                0x00000000000273c2                PWM1_IRQHandler
+                0x00000000000273c2                POWER_CLOCK_IRQHandler
+                0x00000000000273c2                RADIO_IRQHandler
+                0x00000000000273c2                PDM_IRQHandler
+                0x00000000000273c2                TEMP_IRQHandler
+                0x00000000000273c2                QDEC_IRQHandler
+                0x00000000000273c2                TIMER3_IRQHandler
+                0x00000000000273c2                PWM3_IRQHandler
+                0x00000000000273c2                FPU_IRQHandler
+                0x00000000000273c2                USBD_IRQHandler
+                0x00000000000273c2                SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler
+                0x00000000000273c2                UARTE0_UART0_IRQHandler
+                0x00000000000273c2                TIMER4_IRQHandler
+                0x00000000000273c2                CRYPTOCELL_IRQHandler
+                0x00000000000273c2                I2S_IRQHandler
+                0x00000000000273c2                SWI4_EGU4_IRQHandler
+                0x00000000000273c2                TIMER0_IRQHandler
+                0x00000000000273c2                UARTE1_IRQHandler
+                0x00000000000273c2                TIMER1_IRQHandler
+                0x00000000000273c2                SPIM3_IRQHandler
+                0x00000000000273c2                PWM2_IRQHandler
+                0x00000000000273c2                ECB_IRQHandler
+                0x00000000000273c2                SPIM1_SPIS1_TWIM1_TWIS1_SPI1_TWI1_IRQHandler
+                0x00000000000273c2                Default_Handler
+                0x00000000000273c2                SAADC_IRQHandler
+                0x00000000000273c2                CCM_AAR_IRQHandler
+                0x00000000000273c2                WDT_IRQHandler
+                0x00000000000273c2                SWI5_EGU5_IRQHandler
+                0x00000000000273c2                RNG_IRQHandler
+                0x00000000000273c2                RTC2_IRQHandler
+                0x00000000000273c2                PWM0_IRQHandler
+                0x00000000000273c2                SWI3_EGU3_IRQHandler
+                0x00000000000273c2                RTC1_IRQHandler
+                0x00000000000273c2                SWI1_EGU1_IRQHandler
+                0x00000000000273c2                SPIM2_SPIS2_SPI2_IRQHandler
+                0x00000000000273c2                NFCT_IRQHandler
+                0x00000000000273c2                MWU_IRQHandler
+                0x00000000000273c2                QSPI_IRQHandler
+                0x00000000000273c2                COMP_LPCOMP_IRQHandler
+ .text.SystemInitTrap
+                0x00000000000273c4        0x2 CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
+                0x00000000000273c4                SystemInitTrap
+ *fill*         0x00000000000273c6        0x2 
+ .text.SystemInit
+                0x00000000000273c8       0x58 CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
+                0x00000000000273c8                SystemInit
+ .text.main     0x0000000000027420        0x4 CMakeFiles/RTOS.dir/main.c.obj
+                0x0000000000027420                main
+ .text._exit    0x0000000000027424        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+                0x0000000000027424                _exit
  *(.init)
- .init          0x0000000000027190        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000000027190                _init
- .init          0x0000000000027194        0x8 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0000000000027428        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000000027428                _init
+ .init          0x000000000002742c        0x8 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x000000000002719c        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x000000000002719c                _fini
- .fini          0x00000000000271a0        0x8 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .fini          0x0000000000027434        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000000027434                _fini
+ .fini          0x0000000000027438        0x8 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -114,93 +180,93 @@ Linker script and memory map
  *(.dtors)
  *(.rodata*)
  .rodata._global_impure_ptr
-                0x00000000000271a8        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
-                0x00000000000271a8                _global_impure_ptr
+                0x0000000000027440        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000000027440                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x00000000000271ac        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .eh_frame      0x00000000000271ac        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .eh_frame      0x0000000000027444        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0000000000027444        0x4 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtend.o
 
 .mem_section_dummy_rom
 
 .sdh_ble_observers
-                0x00000000000271b0        0x0
+                0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_sdh_ble_observers = .)
  *(SORT_BY_NAME(.sdh_ble_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_ble_observers = .)
 
 .sdh_soc_observers
-                0x00000000000271b0        0x0
+                0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_sdh_soc_observers = .)
  *(SORT_BY_NAME(.sdh_soc_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_soc_observers = .)
 
 .sdh_req_observers
-                0x00000000000271b0        0x0
+                0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_sdh_req_observers = .)
  *(SORT_BY_NAME(.sdh_req_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_req_observers = .)
 
 .sdh_state_observers
-                0x00000000000271b0        0x0
+                0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_sdh_state_observers = .)
  *(SORT_BY_NAME(.sdh_state_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_state_observers = .)
 
 .sdh_stack_observers
-                0x00000000000271b0        0x0
+                0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_sdh_stack_observers = .)
  *(SORT_BY_NAME(.sdh_stack_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_stack_observers = .)
 
-.nrf_queue      0x00000000000271b0        0x0
+.nrf_queue      0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_nrf_queue = .)
  *(.nrf_queue)
                 [!provide]                        PROVIDE (__stop_nrf_queue = .)
 
-.nrf_balloc     0x00000000000271b0        0x0
+.nrf_balloc     0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_nrf_balloc = .)
  *(.nrf_balloc)
                 [!provide]                        PROVIDE (__stop_nrf_balloc = .)
 
-.cli_command    0x00000000000271b0        0x0
+.cli_command    0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_cli_command = .)
  *(.cli_command)
                 [!provide]                        PROVIDE (__stop_cli_command = .)
 
-.crypto_data    0x00000000000271b0        0x0
+.crypto_data    0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_crypto_data = .)
  *(SORT_BY_NAME(.crypto_data*))
                 [!provide]                        PROVIDE (__stop_crypto_data = .)
 
-.pwr_mgmt_data  0x00000000000271b0        0x0
+.pwr_mgmt_data  0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_pwr_mgmt_data = .)
  *(SORT_BY_NAME(.pwr_mgmt_data*))
                 [!provide]                        PROVIDE (__stop_pwr_mgmt_data = .)
 
 .log_const_data
-                0x00000000000271b0        0x0
+                0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_log_const_data = .)
  *(SORT_BY_NAME(.log_const_data*))
                 [!provide]                        PROVIDE (__stop_log_const_data = .)
 
-.log_backends   0x00000000000271b0        0x0
+.log_backends   0x0000000000027448        0x0
                 [!provide]                        PROVIDE (__start_log_backends = .)
  *(SORT_BY_NAME(.log_backends*))
                 [!provide]                        PROVIDE (__stop_log_backends = .)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000000271b0                __exidx_start = .
+                0x0000000000027448                __exidx_start = .
 
-.ARM.exidx      0x00000000000271b0        0x8
+.ARM.exidx      0x0000000000027448        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00000000000271b0        0x8 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.exidx     0x0000000000027448        0x8 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
                                          0x10 (size before relaxing)
-                0x00000000000271b8                __exidx_end = .
-                0x00000000000271b8                . = ALIGN (0x4)
-                0x00000000000271b8                __etext = .
+                0x0000000000027450                __exidx_end = .
+                0x0000000000027450                . = ALIGN (0x4)
+                0x0000000000027450                __etext = .
 
-.data           0x0000000020005978       0x68 load address 0x00000000000271b8
+.data           0x0000000020005978       0x68 load address 0x0000000000027450
                 0x0000000020005978                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -234,7 +300,8 @@ LOAD /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-n
 LOAD /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libstdc++_nano.a
 LOAD /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libsupc++_nano.a
 END GROUP
-LOAD CMakeFiles/RTOS.dir/Startup/startup.s.obj
+LOAD CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
+LOAD CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
 LOAD CMakeFiles/RTOS.dir/main.c.obj
 START GROUP
 LOAD /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/libgcc.a
@@ -259,7 +326,7 @@ LOAD /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-n
 END GROUP
 
 .tm_clone_table
-                0x00000000200059e0        0x0 load address 0x0000000000027220
+                0x00000000200059e0        0x0 load address 0x00000000000274b8
  .tm_clone_table
                 0x00000000200059e0        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
@@ -291,7 +358,7 @@ END GROUP
  *(SORT_BY_NAME(.log_filter_data*))
                 [!provide]                        PROVIDE (__stop_log_filter_data = .)
 
-.bss            0x00000000200059e0       0x1c load address 0x0000000000027220
+.bss            0x00000000200059e0       0x1c load address 0x00000000000274b8
                 0x00000000200059e0                . = ALIGN (0x4)
                 0x0000000000018000                __bss_start__ = .
  *(.bss*)
@@ -303,22 +370,24 @@ END GROUP
                 0x00000000200059fc                . = ALIGN (0x4)
                 0x0000000000018000                __bss_end__ = .
 
-.heap           0x00000000200059fc        0x0
-                0x00000000200059fc                __HeapBase = .
+.heap           0x0000000020005a00     0x4000
+                0x0000000020005a00                __HeapBase = .
                 0x0000000000018000                __end__ = .
                 [!provide]                        PROVIDE (end = .)
  *(.heap*)
-                0x00000000200059fc                __HeapLimit = .
+ .heap          0x0000000020005a00     0x4000 CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
+                0x0000000020009a00                __HeapLimit = .
 
-.stack_dummy    0x00000000200059fc        0x0
+.stack_dummy    0x0000000020005a00     0x4000
  *(.stack*)
+ .stack         0x0000000020005a00     0x4000 CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
                 0x0000000020040000                __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
-                0x0000000020040000                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x000000002003c000                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 0x0000000020040000                PROVIDE (__stack = __StackTop)
                 0x0000000000000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
                 0x0000000000000068                DataInitFlashUsed = (__bss_start__ - __data_start__)
-                0x00000000000001b8                CodeFlashUsed = (__etext - ORIGIN (FLASH))
-                0x0000000000000220                TotalFlashUsed = (CodeFlashUsed + DataInitFlashUsed)
+                0x0000000000000450                CodeFlashUsed = (__etext - ORIGIN (FLASH))
+                0x00000000000004b8                TotalFlashUsed = (CodeFlashUsed + DataInitFlashUsed)
                 0x0000000000000001                ASSERT ((TotalFlashUsed <= LENGTH (FLASH)), region FLASH overflowed with .data and user data)
                 [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x8000))
                 0x0000000000008000                . = SEGMENT_START ("text-segment", 0x8000)
@@ -350,7 +419,7 @@ END GROUP
 .gnu.version_r
  *(.gnu.version_r)
 
-.rel.dyn        0x00000000000271b8        0x0
+.rel.dyn        0x0000000000027450        0x0
  *(.rel.init)
  *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
  *(.rel.fini)
@@ -365,7 +434,7 @@ END GROUP
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
                 [!provide]                        PROVIDE (__rel_iplt_start = .)
  *(.rel.iplt)
- .rel.iplt      0x00000000000271b8        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .rel.iplt      0x0000000000027450        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__rel_iplt_end = .)
 
 .rela.dyn       0x0000000000008000        0x0
@@ -396,11 +465,11 @@ END GROUP
 .plt
  *(.plt)
 
-.iplt           0x00000000000271b8        0x0
+.iplt           0x0000000000027450        0x0
  *(.iplt)
- .iplt          0x00000000000271b8        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .iplt          0x0000000000027450        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.text           0x00000000000271b8        0x0
+.text           0x0000000000027450        0x0
  *(.text.unlikely .text.*_unlikely .text.unlikely.*)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
@@ -409,13 +478,13 @@ END GROUP
  *(.text .stub .text.* .gnu.linkonce.t.*)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x00000000000271b8        0x0 linker stubs
+ .glue_7t       0x0000000000027450        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x00000000000271b8        0x0 linker stubs
+ .glue_7        0x0000000000027450        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x00000000000271b8        0x0 linker stubs
+ .vfp11_veneer  0x0000000000027450        0x0 linker stubs
  *(.v4_bx)
- .v4_bx         0x00000000000271b8        0x0 linker stubs
+ .v4_bx         0x0000000000027450        0x0 linker stubs
 
 .fini
  *(SORT_NONE(.fini))
@@ -517,7 +586,7 @@ END GROUP
 .dynamic
  *(.dynamic)
 
-.got            0x00000000200059fc        0x0 load address 0x000000000002723c
+.got            0x00000000200059fc        0x0 load address 0x00000000000274d4
  *(.got.plt)
  *(.igot.plt)
  .igot.plt      0x00000000200059fc        0x0 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -594,6 +663,7 @@ END GROUP
  .comment       0x0000000000000057       0x58 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
  .comment       0x0000000000000057       0x58 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
  .comment       0x0000000000000057       0x58 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .comment       0x0000000000000057       0x58 CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
  .comment       0x0000000000000057       0x58 CMakeFiles/RTOS.dir/main.c.obj
  .comment       0x0000000000000057       0x58 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
  .comment       0x0000000000000057       0x58 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtend.o
@@ -767,15 +837,17 @@ END GROUP
  .ARM.attributes
                 0x000000000000010a       0x34 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000000000000013e       0x1c CMakeFiles/RTOS.dir/Startup/startup.s.obj
+                0x000000000000013e       0x1c CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
  .ARM.attributes
-                0x000000000000015a       0x34 CMakeFiles/RTOS.dir/main.c.obj
+                0x000000000000015a       0x34 CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
  .ARM.attributes
-                0x000000000000018e       0x34 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+                0x000000000000018e       0x34 CMakeFiles/RTOS.dir/main.c.obj
  .ARM.attributes
-                0x00000000000001c2       0x34 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtend.o
+                0x00000000000001c2       0x34 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
  .ARM.attributes
-                0x00000000000001f6       0x1e /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtn.o
+                0x00000000000001f6       0x34 /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .ARM.attributes
+                0x000000000000022a       0x1e /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtn.o
  *(.gnu.attributes)
 
 .note.gnu.arm.ident
