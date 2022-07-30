@@ -1,1 +1,4 @@
 Datasheets/
+Code/RTOS/Build/CMakeFiles
+Code/RTOS/Build/*
+Code/RTOS/Build/RTOS.*
