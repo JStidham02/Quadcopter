@@ -269,6 +269,11 @@ Reset_Handler:
 
 .L_loop3_done:
 #endif /* __STARTUP_CLEAR_BSS */
+/* initialize floating point unit */
+//set bit
+//use isb to flush pipeline
+
+
 
 /* Execute SystemInit function. */
     bl SystemInit

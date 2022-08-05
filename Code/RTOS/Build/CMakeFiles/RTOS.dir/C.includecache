@@ -6,11 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.c
-startup_config.h
-/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.h
-stdint.h
--
-
-/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.h
-

@@ -1,11 +1,6 @@
 [
 {
   "directory": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build",
-  "command": "/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections     -march=armv7e-m+fp -mfloat-abi=hard -mlittle-endian -Wall -Wextra -Werror -Wno-unused-parameter -Og -g0 -std=gnu11 -o CMakeFiles/RTOS.dir/Startup/startup_config.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.c",
-  "file": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.c"
-},
-{
-  "directory": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build",
   "command": "/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections     -march=armv7e-m+fp -mfloat-abi=hard -mlittle-endian -Wall -Wextra -Werror -Wno-unused-parameter -Og -g0 -std=gnu11 -o CMakeFiles/RTOS.dir/main.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/main.c",
   "file": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/main.c"
 }

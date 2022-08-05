@@ -123,41 +123,23 @@ RTOS/fast:
 	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/build
 .PHONY : RTOS/fast
 
-Startup/gcc_startup_nrf52840.obj: Startup/gcc_startup_nrf52840.S.obj
+Kernel/System_Init/SystemInit.obj: Kernel/System_Init/SystemInit.S.obj
 
-.PHONY : Startup/gcc_startup_nrf52840.obj
-
-# target to build an object file
-Startup/gcc_startup_nrf52840.S.obj:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
-.PHONY : Startup/gcc_startup_nrf52840.S.obj
-
-Startup/startup_config.obj: Startup/startup_config.c.obj
-
-.PHONY : Startup/startup_config.obj
+.PHONY : Kernel/System_Init/SystemInit.obj
 
 # target to build an object file
-Startup/startup_config.c.obj:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
-.PHONY : Startup/startup_config.c.obj
+Kernel/System_Init/SystemInit.S.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj
+.PHONY : Kernel/System_Init/SystemInit.S.obj
 
-Startup/startup_config.i: Startup/startup_config.c.i
+Kernel/System_Init/gcc_startup_nrf52840.obj: Kernel/System_Init/gcc_startup_nrf52840.S.obj
 
-.PHONY : Startup/startup_config.i
+.PHONY : Kernel/System_Init/gcc_startup_nrf52840.obj
 
-# target to preprocess a source file
-Startup/startup_config.c.i:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/startup_config.c.i
-.PHONY : Startup/startup_config.c.i
-
-Startup/startup_config.s: Startup/startup_config.c.s
-
-.PHONY : Startup/startup_config.s
-
-# target to generate assembly for a file
-Startup/startup_config.c.s:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Startup/startup_config.c.s
-.PHONY : Startup/startup_config.c.s
+# target to build an object file
+Kernel/System_Init/gcc_startup_nrf52840.S.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj
+.PHONY : Kernel/System_Init/gcc_startup_nrf52840.S.obj
 
 main.obj: main.c.obj
 
@@ -195,10 +177,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RTOS"
-	@echo "... Startup/gcc_startup_nrf52840.obj"
-	@echo "... Startup/startup_config.obj"
-	@echo "... Startup/startup_config.i"
-	@echo "... Startup/startup_config.s"
+	@echo "... Kernel/System_Init/SystemInit.obj"
+	@echo "... Kernel/System_Init/gcc_startup_nrf52840.obj"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -8,7 +8,7 @@ set(CPU_PARAMETERS
 	-mlittle-endian
 )
 
-set(STARTUP_SCRIPT ./Startup/gcc_startup_nrf52840.S)
+set(STARTUP_SCRIPT ./Kernel/System_Init/gcc_startup_nrf52840.S)
 set(MCU_LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/Include/link_full.ld)
 
 set(TOOLCHAIN_DIR /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/arm-none-eabi/)

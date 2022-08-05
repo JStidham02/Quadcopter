@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj"
-  "CMakeFiles/RTOS.dir/Startup/startup_config.c.obj"
+  "CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj"
+  "CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj"
   "CMakeFiles/RTOS.dir/main.c.obj"
   "RTOS.elf"
   "RTOS.pdb"

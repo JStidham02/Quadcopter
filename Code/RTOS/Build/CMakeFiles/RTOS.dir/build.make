@@ -57,23 +57,15 @@ include CMakeFiles/RTOS.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/RTOS.dir/flags.make
 
-CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj: CMakeFiles/RTOS.dir/flags.make
-CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/gcc_startup_nrf52840.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/gcc_startup_nrf52840.S
+CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/SystemInit.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/SystemInit.S
 
-CMakeFiles/RTOS.dir/Startup/startup_config.c.obj: CMakeFiles/RTOS.dir/flags.make
-CMakeFiles/RTOS.dir/Startup/startup_config.c.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/RTOS.dir/Startup/startup_config.c.obj"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTOS.dir/Startup/startup_config.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.c
-
-CMakeFiles/RTOS.dir/Startup/startup_config.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTOS.dir/Startup/startup_config.c.i"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.c > CMakeFiles/RTOS.dir/Startup/startup_config.c.i
-
-CMakeFiles/RTOS.dir/Startup/startup_config.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTOS.dir/Startup/startup_config.c.s"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Startup/startup_config.c -o CMakeFiles/RTOS.dir/Startup/startup_config.c.s
+CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/gcc_startup_nrf52840.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ASM object CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/gcc_startup_nrf52840.S
 
 CMakeFiles/RTOS.dir/main.c.obj: CMakeFiles/RTOS.dir/flags.make
 CMakeFiles/RTOS.dir/main.c.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/main.c
@@ -90,15 +82,15 @@ CMakeFiles/RTOS.dir/main.c.s: cmake_force
 
 # Object files for target RTOS
 RTOS_OBJECTS = \
-"CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj" \
-"CMakeFiles/RTOS.dir/Startup/startup_config.c.obj" \
+"CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj" \
+"CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj" \
 "CMakeFiles/RTOS.dir/main.c.obj"
 
 # External object files for target RTOS
 RTOS_EXTERNAL_OBJECTS =
 
-RTOS.elf: CMakeFiles/RTOS.dir/Startup/gcc_startup_nrf52840.S.obj
-RTOS.elf: CMakeFiles/RTOS.dir/Startup/startup_config.c.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj
 RTOS.elf: CMakeFiles/RTOS.dir/main.c.obj
 RTOS.elf: CMakeFiles/RTOS.dir/build.make
 RTOS.elf: CMakeFiles/RTOS.dir/link.txt
