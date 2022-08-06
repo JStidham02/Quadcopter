@@ -1,11 +1,11 @@
-#include "kerror_log.h"
+#include "kerror.h"
 #include "ktypes.h"
 
 #ifndef __INTERRUPTS
 #define __INTERRUPTS
 
 
-typedef enum interrupt_numbers{
+typedef enum HandlerType{
 	TOS = 0,
 	Reset = 1,
 	NMI = 2,
@@ -56,7 +56,7 @@ typedef enum interrupt_numbers{
 	Resv7 = 47,
 	MWU = 48,
 	PWM1 = 49,
-	PWM2 = 50
+	PWM2 = 50,
 	SPI2 = 51,
 	RTC2 = 52,
 	I2S = 53,
@@ -106,7 +106,7 @@ void kenable_interrupts(void);
  * This function returns the value of the BASEPRI CSR, which holds the priority required for exception preemption
  * 
  */
-int32_t kget_base_priority(void);
+int32 kget_base_priority(void);
 
 /**
  * This function sets the BASEPRI register.
@@ -127,7 +127,7 @@ void kreturn_from_interrupt(void);
  * This function registers an interrupt handler into the vector table
  * 
  */
-void kregister_interrupt_handler(int32 interrupt_number, void *handler, int32 priority);
+void kregister_interrupt_handler(HandlerType handler_number, void *handler, int32 priority);
 
 
 //must align table to 32 words ()
