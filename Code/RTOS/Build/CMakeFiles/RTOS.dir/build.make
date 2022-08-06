@@ -57,44 +57,89 @@ include CMakeFiles/RTOS.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/RTOS.dir/flags.make
 
-CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj: CMakeFiles/RTOS.dir/flags.make
-CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/SystemInit.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/SystemInit.S
+CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/SystemInit.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/SystemInit.S
 
-CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj: CMakeFiles/RTOS.dir/flags.make
-CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/gcc_startup_nrf52840.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ASM object CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/System_Init/gcc_startup_nrf52840.S
+CMakeFiles/RTOS.dir/Kernel/entry.S.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/entry.S.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/entry.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ASM object CMakeFiles/RTOS.dir/Kernel/entry.S.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/entry.S.obj -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/entry.S
 
-CMakeFiles/RTOS.dir/main.c.obj: CMakeFiles/RTOS.dir/flags.make
-CMakeFiles/RTOS.dir/main.c.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/RTOS.dir/main.c.obj"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTOS.dir/main.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/main.c
+CMakeFiles/RTOS.dir/Kernel/kerror.c.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/kerror.c.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kerror.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/RTOS.dir/Kernel/kerror.c.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/kerror.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kerror.c
 
-CMakeFiles/RTOS.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTOS.dir/main.c.i"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/main.c > CMakeFiles/RTOS.dir/main.c.i
+CMakeFiles/RTOS.dir/Kernel/kerror.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTOS.dir/Kernel/kerror.c.i"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kerror.c > CMakeFiles/RTOS.dir/Kernel/kerror.c.i
 
-CMakeFiles/RTOS.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTOS.dir/main.c.s"
-	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/main.c -o CMakeFiles/RTOS.dir/main.c.s
+CMakeFiles/RTOS.dir/Kernel/kerror.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTOS.dir/Kernel/kerror.c.s"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kerror.c -o CMakeFiles/RTOS.dir/Kernel/kerror.c.s
+
+CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kinterrupts.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kinterrupts.c
+
+CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.i"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kinterrupts.c > CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.i
+
+CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.s"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kinterrupts.c -o CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.s
+
+CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kmemory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kmemory.c
+
+CMakeFiles/RTOS.dir/Kernel/kmemory.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTOS.dir/Kernel/kmemory.c.i"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kmemory.c > CMakeFiles/RTOS.dir/Kernel/kmemory.c.i
+
+CMakeFiles/RTOS.dir/Kernel/kmemory.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTOS.dir/Kernel/kmemory.c.s"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kmemory.c -o CMakeFiles/RTOS.dir/Kernel/kmemory.c.s
+
+CMakeFiles/RTOS.dir/Kernel/kstart.c.obj: CMakeFiles/RTOS.dir/flags.make
+CMakeFiles/RTOS.dir/Kernel/kstart.c.obj: /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kstart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/RTOS.dir/Kernel/kstart.c.obj"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTOS.dir/Kernel/kstart.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kstart.c
+
+CMakeFiles/RTOS.dir/Kernel/kstart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTOS.dir/Kernel/kstart.c.i"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kstart.c > CMakeFiles/RTOS.dir/Kernel/kstart.c.i
+
+CMakeFiles/RTOS.dir/Kernel/kstart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTOS.dir/Kernel/kstart.c.s"
+	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kstart.c -o CMakeFiles/RTOS.dir/Kernel/kstart.c.s
 
 # Object files for target RTOS
 RTOS_OBJECTS = \
-"CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj" \
-"CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj" \
-"CMakeFiles/RTOS.dir/main.c.obj"
+"CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj" \
+"CMakeFiles/RTOS.dir/Kernel/entry.S.obj" \
+"CMakeFiles/RTOS.dir/Kernel/kerror.c.obj" \
+"CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj" \
+"CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj" \
+"CMakeFiles/RTOS.dir/Kernel/kstart.c.obj"
 
 # External object files for target RTOS
 RTOS_EXTERNAL_OBJECTS =
 
-RTOS.elf: CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj
-RTOS.elf: CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj
-RTOS.elf: CMakeFiles/RTOS.dir/main.c.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/entry.S.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
+RTOS.elf: CMakeFiles/RTOS.dir/Kernel/kstart.c.obj
 RTOS.elf: CMakeFiles/RTOS.dir/build.make
 RTOS.elf: CMakeFiles/RTOS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable RTOS.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable RTOS.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RTOS.dir/link.txt --verbose=$(VERBOSE)
 	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-size /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/RTOS.elf
 	/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy -O ihex /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build/RTOS.elf RTOS.hex

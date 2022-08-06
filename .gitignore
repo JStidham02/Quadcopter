@@ -1,4 +1,7 @@
 Datasheets/
-Code/RTOS/Build/CMakeFiles
-Code/RTOS/Build/*
-Code/RTOS/Build/RTOS.*
+cmake_install.cmake
+compile_command.json
+CMakeFiles/
+CMakeCache.txt
+Makefile
+

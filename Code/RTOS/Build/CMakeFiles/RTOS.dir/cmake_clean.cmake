@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj"
-  "CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj"
-  "CMakeFiles/RTOS.dir/main.c.obj"
+  "CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj"
+  "CMakeFiles/RTOS.dir/Kernel/entry.S.obj"
+  "CMakeFiles/RTOS.dir/Kernel/kerror.c.obj"
+  "CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj"
+  "CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj"
+  "CMakeFiles/RTOS.dir/Kernel/kstart.c.obj"
   "RTOS.elf"
   "RTOS.pdb"
 )

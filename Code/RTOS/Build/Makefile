@@ -123,50 +123,131 @@ RTOS/fast:
 	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/build
 .PHONY : RTOS/fast
 
-Kernel/System_Init/SystemInit.obj: Kernel/System_Init/SystemInit.S.obj
+Kernel/SystemInit.obj: Kernel/SystemInit.S.obj
 
-.PHONY : Kernel/System_Init/SystemInit.obj
-
-# target to build an object file
-Kernel/System_Init/SystemInit.S.obj:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/System_Init/SystemInit.S.obj
-.PHONY : Kernel/System_Init/SystemInit.S.obj
-
-Kernel/System_Init/gcc_startup_nrf52840.obj: Kernel/System_Init/gcc_startup_nrf52840.S.obj
-
-.PHONY : Kernel/System_Init/gcc_startup_nrf52840.obj
+.PHONY : Kernel/SystemInit.obj
 
 # target to build an object file
-Kernel/System_Init/gcc_startup_nrf52840.S.obj:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/System_Init/gcc_startup_nrf52840.S.obj
-.PHONY : Kernel/System_Init/gcc_startup_nrf52840.S.obj
+Kernel/SystemInit.S.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/SystemInit.S.obj
+.PHONY : Kernel/SystemInit.S.obj
 
-main.obj: main.c.obj
+Kernel/entry.obj: Kernel/entry.S.obj
 
-.PHONY : main.obj
+.PHONY : Kernel/entry.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/main.c.obj
-.PHONY : main.c.obj
+Kernel/entry.S.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/entry.S.obj
+.PHONY : Kernel/entry.S.obj
 
-main.i: main.c.i
+Kernel/kerror.obj: Kernel/kerror.c.obj
 
-.PHONY : main.i
+.PHONY : Kernel/kerror.obj
+
+# target to build an object file
+Kernel/kerror.c.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
+.PHONY : Kernel/kerror.c.obj
+
+Kernel/kerror.i: Kernel/kerror.c.i
+
+.PHONY : Kernel/kerror.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/main.c.i
-.PHONY : main.c.i
+Kernel/kerror.c.i:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kerror.c.i
+.PHONY : Kernel/kerror.c.i
 
-main.s: main.c.s
+Kernel/kerror.s: Kernel/kerror.c.s
 
-.PHONY : main.s
+.PHONY : Kernel/kerror.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/main.c.s
-.PHONY : main.c.s
+Kernel/kerror.c.s:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kerror.c.s
+.PHONY : Kernel/kerror.c.s
+
+Kernel/kinterrupts.obj: Kernel/kinterrupts.c.obj
+
+.PHONY : Kernel/kinterrupts.obj
+
+# target to build an object file
+Kernel/kinterrupts.c.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj
+.PHONY : Kernel/kinterrupts.c.obj
+
+Kernel/kinterrupts.i: Kernel/kinterrupts.c.i
+
+.PHONY : Kernel/kinterrupts.i
+
+# target to preprocess a source file
+Kernel/kinterrupts.c.i:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.i
+.PHONY : Kernel/kinterrupts.c.i
+
+Kernel/kinterrupts.s: Kernel/kinterrupts.c.s
+
+.PHONY : Kernel/kinterrupts.s
+
+# target to generate assembly for a file
+Kernel/kinterrupts.c.s:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.s
+.PHONY : Kernel/kinterrupts.c.s
+
+Kernel/kmemory.obj: Kernel/kmemory.c.obj
+
+.PHONY : Kernel/kmemory.obj
+
+# target to build an object file
+Kernel/kmemory.c.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
+.PHONY : Kernel/kmemory.c.obj
+
+Kernel/kmemory.i: Kernel/kmemory.c.i
+
+.PHONY : Kernel/kmemory.i
+
+# target to preprocess a source file
+Kernel/kmemory.c.i:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kmemory.c.i
+.PHONY : Kernel/kmemory.c.i
+
+Kernel/kmemory.s: Kernel/kmemory.c.s
+
+.PHONY : Kernel/kmemory.s
+
+# target to generate assembly for a file
+Kernel/kmemory.c.s:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kmemory.c.s
+.PHONY : Kernel/kmemory.c.s
+
+Kernel/kstart.obj: Kernel/kstart.c.obj
+
+.PHONY : Kernel/kstart.obj
+
+# target to build an object file
+Kernel/kstart.c.obj:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kstart.c.obj
+.PHONY : Kernel/kstart.c.obj
+
+Kernel/kstart.i: Kernel/kstart.c.i
+
+.PHONY : Kernel/kstart.i
+
+# target to preprocess a source file
+Kernel/kstart.c.i:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kstart.c.i
+.PHONY : Kernel/kstart.c.i
+
+Kernel/kstart.s: Kernel/kstart.c.s
+
+.PHONY : Kernel/kstart.s
+
+# target to generate assembly for a file
+Kernel/kstart.c.s:
+	$(MAKE) -f CMakeFiles/RTOS.dir/build.make CMakeFiles/RTOS.dir/Kernel/kstart.c.s
+.PHONY : Kernel/kstart.c.s
 
 # Help Target
 help:
@@ -177,11 +258,20 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RTOS"
-	@echo "... Kernel/System_Init/SystemInit.obj"
-	@echo "... Kernel/System_Init/gcc_startup_nrf52840.obj"
-	@echo "... main.obj"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Kernel/SystemInit.obj"
+	@echo "... Kernel/entry.obj"
+	@echo "... Kernel/kerror.obj"
+	@echo "... Kernel/kerror.i"
+	@echo "... Kernel/kerror.s"
+	@echo "... Kernel/kinterrupts.obj"
+	@echo "... Kernel/kinterrupts.i"
+	@echo "... Kernel/kinterrupts.s"
+	@echo "... Kernel/kmemory.obj"
+	@echo "... Kernel/kmemory.i"
+	@echo "... Kernel/kmemory.s"
+	@echo "... Kernel/kstart.obj"
+	@echo "... Kernel/kstart.i"
+	@echo "... Kernel/kstart.s"
 .PHONY : help
 
 

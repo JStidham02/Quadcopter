@@ -278,12 +278,15 @@ SECTIONS
     {
         KEEP(*(.stack*))
     } > RAM
-
+	
     /* Set stack top to end of RAM, and stack limit move down by
      * size of stack_dummy section */
     __StackTop = ORIGIN(RAM) + LENGTH(RAM);
     __StackLimit = __StackTop - SIZEOF(.stack_dummy);
+    __UserStackTop = __StackLimit;
+    __UserStackLimit = __UserStackTop - SIZEOF(.stack_dummy); /* provide user stack with same size as kernel stack */
     PROVIDE(__stack = __StackTop);
+    PROVIDE(__usrstack = __UserStackTop);
 
     /* Check if data + heap + stack exceeds RAM limit */
     ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack")

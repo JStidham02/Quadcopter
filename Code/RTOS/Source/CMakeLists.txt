@@ -8,7 +8,7 @@ set(CPU_PARAMETERS
 	-mlittle-endian
 )
 
-set(STARTUP_SCRIPT ./Kernel/System_Init/gcc_startup_nrf52840.S)
+set(STARTUP_SCRIPT ./Kernel/entry.S)
 set(MCU_LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/Include/link_full.ld)
 
 set(TOOLCHAIN_DIR /home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/arm-none-eabi/)
@@ -18,7 +18,7 @@ set(EXECUTABLE ${CMAKE_PROJECT_NAME})
 enable_language(C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
-set(CMAKE_C_EXTENSIONA ON)
+set(CMAKE_C_EXTENSIONS ON)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -42,6 +42,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 	-Wextra
 	-Werror
 	-Wno-unused-parameter
+	-fno-zero-initialized-in-bss
 	$<$<COMPILE_LANGUAGE:CXX>:
 		-Wno-volatile
 		-Wold-style-cast
@@ -52,6 +53,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 target_link_options(${PROJECT_NAME} PRIVATE
 	-T${MCU_LINKER_SCRIPT}
 	${CPU_PARAMETERS}
+	-nostartfiles
 	-Wl,-Map=${PROJECT_NAME}.map
 	--specs=nosys.specs
 	-Wl,--start-group

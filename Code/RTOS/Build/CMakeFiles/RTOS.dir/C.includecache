@@ -6,3 +6,13 @@
 
 #IncludeRegexTransform: 
 
+/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kerror.h
+ktypes.h
+/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/ktypes.h
+
+/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kstart.c
+kerror.h
+/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kerror.h
+
+/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/ktypes.h
+
