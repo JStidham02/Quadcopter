@@ -27,6 +27,17 @@ static volatile bool heap_failure_detected = FALSE;
  */
 static void *first_block = NULL;
 
+/**
+ * This struct defines an entry in the free list with next and prev pointing to
+ * the block pointer of the next or previous blocks
+ * 
+ */
+typedef struct FreeEntry{
+	struct FreeEntry *next;
+	struct FreeEntry *prev;
+} FreeEntry;
+
+
 
 
 /**
@@ -40,6 +51,8 @@ static void *first_block = NULL;
  * 
  * The first block is listed as allocated because it permenantly contains a pointer to the 
  * first free block in its data section.
+ * 
+ * The free list is a doubly linked list with the data ordered by ascending address
  */
 
 
@@ -91,7 +104,6 @@ static void *first_block = NULL;
 
 
 
-
 /**
  * This function initializes the heap, it returns 1 on success and 0 on failure
  */
@@ -101,6 +113,7 @@ int32 kinit_heap(void){
 	void *free_block;
 	void *final_block;
 	uint32 heap_size;
+	FreeEntry *entry;
 	if (heap_initialized == FALSE){
 		// get start of heap and heap size
 		heap_start = __HeapBase;
@@ -109,12 +122,12 @@ int32 kinit_heap(void){
 		//init first block
 		first_block = heap_start + 4;
 		// first block has size 12 (header + footer + 4 bytes for start of free list)
-		SetSize(GetHeader(first_block), 12); 
+		SetSize(GetHeader(first_block), 16); 
 		SetAlloc(GetHeader(first_block));
-		SetSize(GetFooter(first_block), 12);
+		SetSize(GetFooter(first_block), 16);
 		SetAlloc(GetFooter(first_block)); 
 		//init free block
-		free_block_size = heap_size - 12 - 8;
+		free_block_size = heap_size - 16 - 24;
 		free_block_size &= ~0x03;
 		free_block = GetNextBlock(first_block);
 		SetSize(GetHeader(free_block), free_block_size);
@@ -124,20 +137,32 @@ int32 kinit_heap(void){
 		SetSize(GetHeader(final_block), 0);
 		SetAlloc(GetHeader(final_block));
 		//init free list
-		*((void **) (first_block)) = free_block;
-		*((void **) (free_block)) = NULL;
+		//first entry is first block, its prev is NULL
+		entry = (FreeEntry *) first_block;
+		entry->next = (FreeEntry *) free_block;
+		entry->prev = (FreeEntry *) NULL;	
+		//free block is next entry, prev is the first block, next is the final block
+		entry = (FreeEntry *) free_block;
+		entry->next = (FreeEntry *) final_block;
+		entry->prev = (FreeEntry *) first_block;
+		//final block is the last entry, free block is prev, next is NULL
+		entry = (FreeEntry *) final_block;
+		entry->next = (FreeEntry *) NULL;
+		entry->prev = (FreeEntry *) free_block;
 		//return indicating success
 		heap_failure_detected = FALSE;
 		heap_initialized = TRUE;
-
 	}
 	else{
 		return_value = -1;
 	}
-
 	
 	return return_value;
 }
+
+
+
+
 
 
 /**
@@ -145,15 +170,31 @@ int32 kinit_heap(void){
  *  
  */
 void *kmalloc(uint32 size){
-	
+	//use first fit
+	//navigate free list until a large enough block is found (size required rounded up to multiple of 4 (data size mut be 8 or greater), plus 8)
+	//if no list is found, return NULL
+	//else, place memory at block and return pointer to block
+
+	//requires a place function
+
 	return NULL;
 }
 
 
+
+
+
+
 void kfree(void *block){
+	//mark block as free
+	//coalesce
+	//add to new 
+
+	//requires a coalesce function
 
 	return;
 }
+
 
 
 /**
@@ -167,6 +208,11 @@ void kfree(void *block){
  */
 int32 kverify_heap(FailBehavior behavior){
 
+	/**
+	 * checks that all free blocks in the free list are marked as free, and 
+	 * that navigating in block order results in ending at the end block before reaching the end of the heap
+	 * 
+	 */
 
 
 	return 0;
