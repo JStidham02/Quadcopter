@@ -1,6 +1,7 @@
 
 
 #include "kerror.h"
+#include "kmemory.h"
 
 //this element is the first entry in the error log and only its next field should be changed
 Error error_log = {
@@ -24,7 +25,7 @@ int32 klog_error(char *msg, int32 word_1, int32 word_2, int32 word_3)
 		next = next->next;
 	}
 	//allocate new error
-	//new = malloc(sizeof(Error));
+	new = kmalloc(sizeof(Error));
 	new = NULL;
 	if (new == NULL)
 	{
@@ -47,4 +48,15 @@ int32 klog_error(char *msg, int32 word_1, int32 word_2, int32 word_3)
 	
 	return return_status;
 	
+}
+
+//force error to go into first entry in kernel error list
+void kforce_log_error(char *msg, int32 word_1, int32 word_2, int32 word_3)
+{
+	//behaves same as klog_error except it forces message into first slot
+	error_log.msg = msg;
+	error_log.error_word_1 = word_1;
+	error_log.error_word_2 = word_2;
+	error_log.error_word_3 = word_3;
+	return;
 }

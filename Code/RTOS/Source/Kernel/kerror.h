@@ -45,6 +45,10 @@ typedef struct kernel_error{
 int32 klog_error(char *msg, int32 word_1, int32 word_2, int32 word_3);
 
 
-
+/**
+ * This function forces the error logger to place an error message in the first message
+ * block. This should only be used in the case that the heap failed to initialize or klog_error fails.
+ */
+void kforce_log_error(char *msg, int32 word_1, int32 word_2, int32 word_3);
 
 #endif

@@ -167,6 +167,8 @@ int32 kinit_heap(void){
 /**
  * This function returns a word-aligned pointer to a location in memory of at least size bytes
  *  
+ *  It uses a first fit method iterating through the free list, and splits a free block to allocate when the remainder is 
+ * greater than 24 bytes
  */
 void *kmalloc(uint32 size){
 	FreeEntry *list;
@@ -204,9 +206,11 @@ void *kmalloc(uint32 size){
 	}
 	if (found != NULL)
 	{
-		//remove block from free list and maybe split
-		kmemplace(found, req_size);
-
+		//remove block from free list and maybe split, return NULL if this fails
+		if (kmemplace(found, req_size) != 0)
+		{
+			found = NULL;
+		}
 	}
 
 	return (void *) found;

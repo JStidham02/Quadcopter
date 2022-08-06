@@ -8,6 +8,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
+ .text.klog_error
+                0x0000000000000000       0x1c CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj
@@ -17,7 +19,7 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
  .text.kmemplace
                 0x0000000000000000       0x9c CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
- .text.kmalloc  0x0000000000000000       0x44 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
+ .text.kmalloc  0x0000000000000000       0x48 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
  .text.kfree    0x0000000000000000        0x2 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
  .text.kverify_heap
                 0x0000000000000000        0x4 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
@@ -35,7 +37,7 @@ RAM              0x0000000020005978 0x000000000003a688 xrw
 Linker script and memory map
 
 
-.text           0x0000000000027000      0x33d
+.text           0x0000000000027000      0x341
  *(.isr_vector)
  .isr_vector    0x0000000000027000      0x200 CMakeFiles/RTOS.dir/Kernel/entry.S.obj
                 0x0000000000027000                __isr_vector
@@ -98,14 +100,14 @@ Linker script and memory map
                 0x000000000002724a                MWU_IRQHandler
                 0x000000000002724a                QSPI_IRQHandler
                 0x000000000002724a                COMP_LPCOMP_IRQHandler
- .text.klog_error
-                0x000000000002724c       0x14 CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
-                0x000000000002724c                klog_error
+ .text.kforce_log_error
+                0x000000000002724c       0x18 CMakeFiles/RTOS.dir/Kernel/kerror.c.obj
+                0x000000000002724c                kforce_log_error
  .text.kinit_heap
-                0x0000000000027260       0xbc CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
-                0x0000000000027260                kinit_heap
- .text._start   0x000000000002731c       0x1c CMakeFiles/RTOS.dir/Kernel/kstart.c.obj
-                0x000000000002731c                _start
+                0x0000000000027264       0xbc CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
+                0x0000000000027264                kinit_heap
+ .text._start   0x0000000000027320       0x1c CMakeFiles/RTOS.dir/Kernel/kstart.c.obj
+                0x0000000000027320                _start
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -120,88 +122,88 @@ Linker script and memory map
  *(.dtors)
  *(.rodata*)
  .rodata._start.str1.4
-                0x0000000000027338        0x5 CMakeFiles/RTOS.dir/Kernel/kstart.c.obj
+                0x000000000002733c        0x5 CMakeFiles/RTOS.dir/Kernel/kstart.c.obj
  *(.eh_frame*)
 
 .mem_section_dummy_rom
 
 .sdh_ble_observers
-                0x000000000002733d        0x0
+                0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_sdh_ble_observers = .)
  *(SORT_BY_NAME(.sdh_ble_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_ble_observers = .)
 
 .sdh_soc_observers
-                0x000000000002733d        0x0
+                0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_sdh_soc_observers = .)
  *(SORT_BY_NAME(.sdh_soc_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_soc_observers = .)
 
 .sdh_req_observers
-                0x000000000002733d        0x0
+                0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_sdh_req_observers = .)
  *(SORT_BY_NAME(.sdh_req_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_req_observers = .)
 
 .sdh_state_observers
-                0x000000000002733d        0x0
+                0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_sdh_state_observers = .)
  *(SORT_BY_NAME(.sdh_state_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_state_observers = .)
 
 .sdh_stack_observers
-                0x000000000002733d        0x0
+                0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_sdh_stack_observers = .)
  *(SORT_BY_NAME(.sdh_stack_observers*))
                 [!provide]                        PROVIDE (__stop_sdh_stack_observers = .)
 
-.nrf_queue      0x000000000002733d        0x0
+.nrf_queue      0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_nrf_queue = .)
  *(.nrf_queue)
                 [!provide]                        PROVIDE (__stop_nrf_queue = .)
 
-.nrf_balloc     0x000000000002733d        0x0
+.nrf_balloc     0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_nrf_balloc = .)
  *(.nrf_balloc)
                 [!provide]                        PROVIDE (__stop_nrf_balloc = .)
 
-.cli_command    0x000000000002733d        0x0
+.cli_command    0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_cli_command = .)
  *(.cli_command)
                 [!provide]                        PROVIDE (__stop_cli_command = .)
 
-.crypto_data    0x000000000002733d        0x0
+.crypto_data    0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_crypto_data = .)
  *(SORT_BY_NAME(.crypto_data*))
                 [!provide]                        PROVIDE (__stop_crypto_data = .)
 
-.pwr_mgmt_data  0x000000000002733d        0x0
+.pwr_mgmt_data  0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_pwr_mgmt_data = .)
  *(SORT_BY_NAME(.pwr_mgmt_data*))
                 [!provide]                        PROVIDE (__stop_pwr_mgmt_data = .)
 
 .log_const_data
-                0x000000000002733d        0x0
+                0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_log_const_data = .)
  *(SORT_BY_NAME(.log_const_data*))
                 [!provide]                        PROVIDE (__stop_log_const_data = .)
 
-.log_backends   0x000000000002733d        0x0
+.log_backends   0x0000000000027341        0x0
                 [!provide]                        PROVIDE (__start_log_backends = .)
  *(SORT_BY_NAME(.log_backends*))
                 [!provide]                        PROVIDE (__stop_log_backends = .)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000002733d                __exidx_start = .
+                0x0000000000027341                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000000002733d                __exidx_end = .
-                0x0000000000027340                . = ALIGN (0x4)
-                0x0000000000027340                __etext = .
+                0x0000000000027341                __exidx_end = .
+                0x0000000000027344                . = ALIGN (0x4)
+                0x0000000000027344                __etext = .
 
-.data           0x0000000020005978       0x1c load address 0x0000000000027340
+.data           0x0000000020005978       0x1c load address 0x0000000000027344
                 0x0000000020005978                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -290,7 +292,7 @@ END GROUP
  *(SORT_BY_NAME(.log_filter_data*))
                 [!provide]                        PROVIDE (__stop_log_filter_data = .)
 
-.bss            0x0000000020005994        0x8 load address 0x000000000002735c
+.bss            0x0000000020005994        0x8 load address 0x0000000000027360
                 0x0000000020005994                . = ALIGN (0x4)
                 0x0000000000018000                __bss_start__ = .
  *(.bss*)
@@ -321,8 +323,8 @@ END GROUP
                 [!provide]                        PROVIDE (__usrstack = __UserStackTop)
                 0x0000000000000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
                 0x000000000000001c                DataInitFlashUsed = (__bss_start__ - __data_start__)
-                0x0000000000000340                CodeFlashUsed = (__etext - ORIGIN (FLASH))
-                0x000000000000035c                TotalFlashUsed = (CodeFlashUsed + DataInitFlashUsed)
+                0x0000000000000344                CodeFlashUsed = (__etext - ORIGIN (FLASH))
+                0x0000000000000360                TotalFlashUsed = (CodeFlashUsed + DataInitFlashUsed)
                 0x0000000000000001                ASSERT ((TotalFlashUsed <= LENGTH (FLASH)), region FLASH overflowed with .data and user data)
                 [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x8000))
                 0x0000000000008000                . = SEGMENT_START ("text-segment", 0x8000)
@@ -354,7 +356,7 @@ END GROUP
 .gnu.version_r
  *(.gnu.version_r)
 
-.rel.dyn        0x0000000000027340        0x0
+.rel.dyn        0x0000000000027344        0x0
  *(.rel.init)
  *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
  *(.rel.fini)
@@ -369,7 +371,7 @@ END GROUP
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
                 [!provide]                        PROVIDE (__rel_iplt_start = .)
  *(.rel.iplt)
- .rel.iplt      0x0000000000027340        0x0 CMakeFiles/RTOS.dir/Kernel/entry.S.obj
+ .rel.iplt      0x0000000000027344        0x0 CMakeFiles/RTOS.dir/Kernel/entry.S.obj
                 [!provide]                        PROVIDE (__rel_iplt_end = .)
 
 .rela.dyn       0x0000000000008000        0x0
@@ -400,11 +402,11 @@ END GROUP
 .plt
  *(.plt)
 
-.iplt           0x0000000000027340        0x0
+.iplt           0x0000000000027344        0x0
  *(.iplt)
- .iplt          0x0000000000027340        0x0 CMakeFiles/RTOS.dir/Kernel/entry.S.obj
+ .iplt          0x0000000000027344        0x0 CMakeFiles/RTOS.dir/Kernel/entry.S.obj
 
-.text           0x0000000000027340        0x0
+.text           0x0000000000027344        0x0
  *(.text.unlikely .text.*_unlikely .text.unlikely.*)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
@@ -413,13 +415,13 @@ END GROUP
  *(.text .stub .text.* .gnu.linkonce.t.*)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x0000000000027340        0x0 linker stubs
+ .glue_7t       0x0000000000027344        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x0000000000027340        0x0 linker stubs
+ .glue_7        0x0000000000027344        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x0000000000027340        0x0 linker stubs
+ .vfp11_veneer  0x0000000000027344        0x0 linker stubs
  *(.v4_bx)
- .v4_bx         0x0000000000027340        0x0 linker stubs
+ .v4_bx         0x0000000000027344        0x0 linker stubs
 
 .fini
  *(SORT_NONE(.fini))
@@ -521,7 +523,7 @@ END GROUP
 .dynamic
  *(.dynamic)
 
-.got            0x000000002000599c        0x0 load address 0x0000000000027364
+.got            0x000000002000599c        0x0 load address 0x0000000000027368
  *(.got.plt)
  *(.igot.plt)
  .igot.plt      0x000000002000599c        0x0 CMakeFiles/RTOS.dir/Kernel/entry.S.obj

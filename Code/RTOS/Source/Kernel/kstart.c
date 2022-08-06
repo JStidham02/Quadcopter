@@ -6,7 +6,7 @@
 void _start(void){
 	
 	if(kinit_heap() != 0){
-		klog_error("test", 0, 0, 0);
+		kforce_log_error("test", 0, 0, 0);
 	}
 	
 	
