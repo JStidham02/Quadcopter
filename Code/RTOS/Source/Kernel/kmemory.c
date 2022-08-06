@@ -38,6 +38,8 @@ typedef struct FreeEntry{
 } FreeEntry;
 
 
+static int32 kmemplace(FreeEntry *block, uint32 req_size);
+
 
 
 /**
@@ -163,18 +165,51 @@ int32 kinit_heap(void){
 
 
 /**
- * This function returns a word-aligned pointerto a location in memory of at least size bytes
+ * This function returns a word-aligned pointer to a location in memory of at least size bytes
  *  
  */
 void *kmalloc(uint32 size){
-	//use first fit
-	//navigate free list until a large enough block is found (size required rounded up to multiple of 4 (data size mut be 8 or greater), plus 8)
-	//if no list is found, return NULL
-	//else, place memory at block and return pointer to block
+	FreeEntry *list;
+	FreeEntry *found;
+	uint32 req_size;
+	uint32 mod_four;
+	//compute required size
+	mod_four = size & 0x03;
+	if (mod_four == 0)
+	{
+		//minimum size of block
+		req_size = size;
+		req_size += 8;
+	}
+	else
+	{
+		//minimum size of block
+		req_size = size + 4 - mod_four;
+		req_size += 8;
+	}
+	list = (FreeEntry *) first_block;
+	found = NULL;
+	//search for large enough free block
+	while ( (GetSize(GetHeader(list->next))) != 0 &&  (found == NULL))
+	{
+		if (GetSize(GetHeader(list->next)) >= req_size)
+		{
+			found = list->next;
+		}
+		else
+		{
+			list = list->next;
+		}
 
-	//requires a place function
+	}
+	if (found != NULL)
+	{
+		//remove block from free list and maybe split
+		kmemplace(found, req_size);
 
-	return NULL;
+	}
+
+	return (void *) found;
 }
 
 
@@ -226,7 +261,7 @@ int32 kverify_heap(FailBehavior behavior){
  */
 static int32 kmemplace(FreeEntry *block, uint32 req_size){
 	int32 return_status;
-	int32 size_of_block;
+	uint32 size_of_block;
 	void *header;
 	void *footer;
 	void *new_block;
@@ -281,7 +316,6 @@ static int32 kmemplace(FreeEntry *block, uint32 req_size){
 	{
 		return_status = -1;
 	}
-
 	//otherwise return error
 	return return_status;
 
