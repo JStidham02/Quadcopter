@@ -162,9 +162,6 @@ int32 kinit_heap(void){
 
 
 
-
-
-
 /**
  * This function returns a word-aligned pointerto a location in memory of at least size bytes
  *  
@@ -179,10 +176,6 @@ void *kmalloc(uint32 size){
 
 	return NULL;
 }
-
-
-
-
 
 
 void kfree(void *block){
@@ -217,3 +210,82 @@ int32 kverify_heap(FailBehavior behavior){
 
 	return 0;
 }
+
+
+/**
+ * This function allocates a block of memory of
+ * at least size req_size in memory. it returns 0 on success and
+ * 1 on failure. The parameter block it the block at which the 
+ * memory should be place.
+ * 
+ * Block should point to a block in the free list
+ * 
+ * req_size should be the required size of the BLOCK. It must 
+ * be at least 16 and should be a multiple of 4
+ * 
+ */
+static int32 kmemplace(FreeEntry *block, uint32 req_size){
+	int32 return_status;
+	int32 size_of_block;
+	void *header;
+	void *footer;
+	void *new_block;
+	FreeEntry *prevPtr;
+	FreeEntry *nextPtr;
+	//default return status is success
+	return_status = 0;
+	//pointer to header of block
+	header = GetHeader(block);
+	footer = GetFooter(block);
+	size_of_block = GetSize(header);
+	//check allocation status and size
+	if (size_of_block >= req_size && !GetAlloc(header))
+	{
+		//remove from list
+		prevPtr = block->prev;
+		nextPtr = block->next;
+		prevPtr->next = nextPtr;
+		nextPtr->prev = prevPtr;
+		//decide whether to split
+		if ((size_of_block - req_size) >= 24)
+		{
+			//mark old block as allocated
+			SetSize(header, req_size);
+			footer = GetFooter(block);
+			SetSize(footer, req_size);
+			SetAlloc(header);
+			SetAlloc(footer);
+			//create new block
+			//compute size of new block
+			size_of_block = size_of_block - req_size;
+			new_block = GetNextBlock(block);
+			header = GetHeader(new_block);
+			footer = GetFooter(new_block);
+			//set size also marks the block as free
+			SetSize(header, size_of_block);
+			SetSize(footer, size_of_block);
+			//add new block to free list
+			prevPtr->next = new_block;
+			nextPtr->prev = new_block;
+			((FreeEntry *) new_block)->next = nextPtr;
+			((FreeEntry *) new_block)->prev = prevPtr;
+		}
+		else
+		{
+			//mark allocated
+			SetAlloc(header);
+			SetAlloc(footer);
+		}
+	}
+	else
+	{
+		return_status = -1;
+	}
+
+	//otherwise return error
+	return return_status;
+
+}
+
+
+
