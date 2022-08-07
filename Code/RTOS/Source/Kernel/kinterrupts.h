@@ -88,9 +88,9 @@ void kinit_interrupts(void);
 /**
  * This function disables all maskable interrupts by setting the primask register
  * 
- * 
+ * implemented in ASM
  */
-void kdisable_interrupts(void);
+extern void kdisable_interrupts(void);
 
 
 /**
@@ -99,19 +99,45 @@ void kdisable_interrupts(void);
  * Note: all interrupts may still be masked after calling this function. It only 
  * enables the preemption of unmasked interrupts
  * 
+ * implemented in ASM
  */
-void kenable_interrupts(void);
+extern void kenable_interrupts(void);
 
 /**
  * This function returns the value of the BASEPRI CSR, which holds the priority required for exception preemption
+ * a value of 0 disables the effect of this register
  * 
+ * implemented in ASM
  */
-int32 kget_base_priority(void);
+extern uint32 kget_base_priority(void);
 
 /**
  * This function sets the BASEPRI register.
+ * 
+ * implemented in ASM
  */
-void kset_base_priority(void);
+extern void kset_base_priority(uint32 priority);
+
+/**
+ * This function gets the value of th faultmask register
+ * 
+ * it returns 1 when the register is set and 0 when it is not set
+ */
+extern uint32 kget_fault_mask(void);
+
+
+/**
+ * This function sets the fault mask register which sets the executing 
+ * priotity to -1, equivalent to hard_fault
+ */
+extern void kset_fault_mask(void);
+
+/**
+ * This function sets the fault mask register which sets the executing 
+ * priotity to -1, equivalent to hard_fault
+ */
+extern void kclear_fault_mask(void);
+
 
 /**
  * This function should be called at the end of every interrupt handler to ensure that the interrupt correctly
@@ -120,7 +146,6 @@ void kset_base_priority(void);
  * 
  */
 void kreturn_from_interrupt(void);
-
 
 
 /**
