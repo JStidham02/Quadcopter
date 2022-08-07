@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build",
-  "command": "/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections     -march=armv7e-m+fp -mfloat-abi=hard -mlittle-endian -Wall -Wextra -Werror -Wno-unused-parameter -fno-zero-initialized-in-bss -Og -g0 -std=gnu11 -o CMakeFiles/RTOS.dir/Kernel/kinterrupts.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kinterrupts.c",
-  "file": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kinterrupts.c"
+  "command": "/home/jstidham/Downloads/gcc_arm_embedded/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc  -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections     -march=armv7e-m+fp -mfloat-abi=hard -mlittle-endian -Wall -Wextra -Werror -Wno-unused-parameter -fno-zero-initialized-in-bss -Og -g0 -std=gnu11 -o CMakeFiles/RTOS.dir/Kernel/kexceptions.c.obj   -c /home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kexceptions.c",
+  "file": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Source/Kernel/kexceptions.c"
 },
 {
   "directory": "/home/jstidham/Desktop/Personal/Quadcopter/Code/RTOS/Build",

@@ -2,7 +2,7 @@
 
 #include "kerror.h"
 #include "kmemory.h"
-#include "kinterrupts.h"
+#include "kexceptions.h"
 
 void _start(void){
 	int32 return_status;
@@ -13,7 +13,13 @@ void _start(void){
 	}
 
 	kset_base_priority(0);
-	kenable_interrupts();
+	kunmask_exceptions();
+
+	kinit_exception_table();
+
+
+
+
 
 
 	

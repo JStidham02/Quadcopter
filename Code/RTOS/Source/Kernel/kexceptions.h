@@ -70,7 +70,7 @@ typedef enum HandlerType{
 	PWM3 = 61,
 	Resv10 = 62,
 	SPIM3 = 63,
-	TOTAL = 64
+	TOTAL_VECTORS = 64
 } HandlerType;
 
 
@@ -83,14 +83,15 @@ typedef enum HandlerType{
  * kernel-modifiable interrupt vector table and initializes the table to indicate that 
  * the ISRs are thumb code
  */
-void kinit_interrupts(void);
+void kinit_exception_table(void);
+
 
 /**
  * This function disables all maskable interrupts by setting the primask register
  * 
  * implemented in ASM
  */
-extern void kdisable_interrupts(void);
+extern void kmask_exceptions(void);
 
 
 /**
@@ -101,7 +102,7 @@ extern void kdisable_interrupts(void);
  * 
  * implemented in ASM
  */
-extern void kenable_interrupts(void);
+extern void kunmask_exceptions(void);
 
 /**
  * This function returns the value of the BASEPRI CSR, which holds the priority required for exception preemption
@@ -139,30 +140,48 @@ extern void kset_fault_mask(void);
 extern void kclear_fault_mask(void);
 
 
+
 /**
- * This function should be called at the end of every interrupt handler to ensure that the interrupt correctly
+ * Given a HandlerType enumeration of the interrupt, this function
+ * sets the interrupt enable bit for the requested interrupt
+ */
+void kenable_interrupt(HandlerType exception_num);
+
+/**
+ * Given a HandlerType enumeration of the interrupt, this function
+ * sets the interrupt enable bit for the requested interrupt
+ * in the NVIC. Does not apply to system exceptions 
+ */
+void kenable_interrupt(HandlerType exception_num);
+
+
+/**
+ * This function should be called at the end of every exception handler to ensure that the interrupt correctly
  * restores the context. Failure to do so could result in a corrupted stack
- * 
- * 
  */
-void kreturn_from_interrupt(void);
+void kreturn_from_exception(void);
 
 
 /**
- * This function registers an interrupt handler into the vector table
+ * This function registers an exception handler into the vector table.
+ * 
+ * This function should not be called until kinit_interrupts has been called
+ */
+void kregister_exception_handler(HandlerType handler_number, void *handler, int32 priority);
+
+
+/**
+ * This function sets the priority of the requested interrupt
+ * 
+ * If the interrupt is a system exception then it is set in the 
+ * System Handler Priority registers, otherwise is is set in the NVIC registers
  * 
  */
-void kregister_interrupt_handler(HandlerType handler_number, void *handler, int32 priority);
-
-
-//must align table to 32 words ()
-// remember lsb of each handler MUST be 1
+void kset_exception_priority(HandlerType int_num);
 
 
 /**
  * This function can be used as a default ISR 
- * 
- * 
  */
 void default_trap_ISR(void);
 

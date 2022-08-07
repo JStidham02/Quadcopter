@@ -7,13 +7,13 @@
 	.thumb
 	.thumb_func
 	.align 1
-	.globl kdisable_interrupts
-	.type kdisable_interrupts, %function
+	.globl kmask_exceptions
+	.type kmask_exceptions, %function
     /**
     This function takes no parameters. 
     It sets the PRIMASK control register,
     disabling all interrupts with configurable priority */
-kdisable_interrupts:
+kmask_exceptions:
     //read primask
     MRS R0, PRIMASK
     //set bit 0
@@ -29,13 +29,13 @@ kdisable_interrupts:
 	.thumb
 	.thumb_func
 	.align 1
-	.globl kenable_interrupts
-	.type kenable_interrupts, %function
+	.globl kunmask_exceptions
+	.type kunmask_exceptions, %function
     /**
     This function takes not parameter and returns nothing
     it write 0 to the primask register, enabling interrupts with a priority <= basepri
     to preempt current execution */
-kenable_interrupts:
+kunmask_exceptions:
     //read primask
     MRS R0, PRIMASK
     //clear bit 0
