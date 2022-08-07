@@ -40,6 +40,8 @@ typedef struct FreeEntry{
 
 static int32 kmemplace(FreeEntry *block, uint32 req_size);
 
+static void kcoalesce(FreeEntry *block);
+
 
 
 /**
@@ -102,8 +104,18 @@ static int32 kmemplace(FreeEntry *block, uint32 req_size);
  * This macro returns a pointer to the next block given a pointer to the 
  * current block
  */
-#define GetNextBlock(bp)	(GetFooter(bp) + 0x08)		
+#define GetNextBlock(bp)	(GetFooter(bp) + 0x08)	
 
+/**
+ * This macro returns the block pointer to the previous block
+ */
+#define GetPrevFooter(bp)	(((void *) bp) - 0x08)
+
+/**
+ * This function returns the previous block pointer
+ * 
+ */
+#define GetPrevBlock(bp)	(((void *) bp) - (GetSize(GetPrevFooter(bp))))
 
 
 /**
@@ -217,12 +229,20 @@ void *kmalloc(uint32 size){
 }
 
 
+/**
+ * this function marks a block as free and adds it to the free list
+ * 
+ * Is used by the kernel to free memory
+ */
 void kfree(void *block){
-	//mark block as free
-	//coalesce
-	//add to new 
-
-	//requires a coalesce function
+	FreeEntry *entry;
+	entry = (FreeEntry *) block;
+	//verify block not already marked as free
+	if (GetAlloc(GetHeader(entry)) != 0)
+	{
+		//coalesce, mark as free, and add to free list
+		kcoalesce(entry);
+	}
 
 	return;
 }
@@ -327,3 +347,87 @@ static int32 kmemplace(FreeEntry *block, uint32 req_size){
 
 
 
+static void kcoalesce(FreeEntry *block)
+{
+	FreeEntry *prevEntry;
+	FreeEntry *nextEntry;
+	FreeEntry *start;
+	FreeEntry *temp;
+	uint32 size_of_entry;
+	
+	size_of_entry = GetSize(GetHeader(block));
+	ClearAlloc(GetHeader(block));
+	ClearAlloc(GetFooter(block));
+	start = block;
+	prevEntry = NULL;
+	nextEntry = NULL;
+	if ((GetAlloc(GetPrevFooter(block))) == 0)
+	{
+		temp = GetPrevBlock(block);
+		start = temp;
+		//increase size of entry
+		size_of_entry += GetSize(GetHeader(temp));
+		//set next and prev entries
+		prevEntry = temp->prev;
+		nextEntry = temp->next;
+		// remove from list
+		prevEntry->next = nextEntry;
+		nextEntry->prev = prevEntry;
+
+	}
+	if ((GetAlloc(GetHeader(GetNextBlock(block)))) == 0)
+	{
+		temp = GetNextBlock(block);
+		//increase size of entry
+		size_of_entry += GetSize(GetHeader(temp));
+		//set nextEntry
+		nextEntry = temp->next;
+		if (prevEntry == NULL)
+		{
+			prevEntry = temp->prev;
+		}
+		//remove from list
+		nextEntry->prev = prevEntry;
+		prevEntry->next = nextEntry;
+	}
+	if (prevEntry == NULL)
+	{
+		//navigate list for correct spot
+		temp = (FreeEntry *) first_block;
+		while(temp->next != NULL)
+		{
+			if ((((uint32) temp) < ((uint32) block)) && (((uint32) block) < ((uint32) temp->next)))
+			{
+				prevEntry = temp;
+				nextEntry = temp->next;
+				prevEntry->next = block;
+				nextEntry->prev = block;
+				block->prev = prevEntry;
+				block->next = nextEntry;
+				break;
+			}
+			else
+			{
+				temp = temp->next;
+			}
+
+		}
+	}
+	else
+	{
+		//must set new block size and add to list
+		SetSize(GetHeader(start), size_of_entry);
+		SetSize(GetFooter(start), size_of_entry);
+		nextEntry->prev = start;
+		prevEntry->next = start;
+		start->next = nextEntry;
+		start->prev = prevEntry;
+	}
+	//create new block pointer 
+	//fill block header and footer with correct size
+	//add new block to free list
+
+
+
+
+}

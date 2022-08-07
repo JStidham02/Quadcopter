@@ -51,4 +51,5 @@ int32 klog_error(char *msg, int32 word_1, int32 word_2, int32 word_3);
  */
 void kforce_log_error(char *msg, int32 word_1, int32 word_2, int32 word_3);
 
+
 #endif

@@ -19,8 +19,10 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
  .text.kmemplace
                 0x0000000000000000       0x9c CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
+ .text.kcoalesce
+                0x0000000000000000       0xc0 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
  .text.kmalloc  0x0000000000000000       0x48 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
- .text.kfree    0x0000000000000000        0x2 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
+ .text.kfree    0x0000000000000000       0x14 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
  .text.kverify_heap
                 0x0000000000000000        0x4 CMakeFiles/RTOS.dir/Kernel/kmemory.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/RTOS.dir/Kernel/kstart.c.obj
