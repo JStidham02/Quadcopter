@@ -253,21 +253,49 @@ void kfree(void *block){
  * This function verifies the heap. It returns 
  * 0 on success
  * -1 on failure
- * if behavior = return_status or reset_heap
- * 
- * if behavior = reset_machine then the machine is reset 
- * 
+ * checks that all free blocks in the free list are marked as free, and 
+ * that navigating in block order results in ending at the end block before reaching the end of the heap
  */
-int32 kverify_heap(FailBehavior behavior){
+int32 kverify_heap(void){
+	int32 return_status;
+	FreeEntry *temp;
 
+	return_status = 0;
 	/**
-	 * checks that all free blocks in the free list are marked as free, and 
-	 * that navigating in block order results in ending at the end block before reaching the end of the heap
-	 * 
+
 	 */
+	temp = ((FreeEntry *) first_block)->next;
+	
+	while(GetSize(GetHeader(temp)) != 0)
+	{
+		//if block in free list marked as allocated
+		if(GetAlloc(GetHeader(temp)) != 0)
+		{
+			return_status = -1;
+			break;
+		}
+		//else if block outside of heap limit
+		else if (((uint32) temp) > ((uint32) heap_limit))
+		{
+			return_status = -1;
+			break;
+		}
+		temp = temp->next;
+	}
 
+	temp = (FreeEntry *) first_block;
+	while(GetSize(GetHeader(temp)) != 0)
+	{
+		//if block outside of heap limit
+		if (((uint32) temp) > ((uint32) heap_limit))
+		{
+			return_status = -1;
+			break;
+		}
+		temp = GetNextBlock(temp);
+	}
 
-	return 0;
+	return return_status;
 }
 
 

@@ -19,15 +19,6 @@ extern void *__HeapBase;
  */
 extern void *__HeapLimit;
 
-/**
- * This enum specifies what the kverify_heap function should 
- * do upon detection of an corrupted heap
- */
-typedef enum FailBehavior{
-    return_status = 0,
-    reset_heap = 1,
-    reset_machine = 2
-} FailBehavior;
 
 
 
@@ -62,12 +53,10 @@ void kfree(void *block);
  * This function verifies the heap. It returns 
  * 0 on success
  * -1 on failure
- * if behavior = return_status or reset_heap
- * 
- * if behavior = reset_machine then the machine is reset 
- * 
+ * checks that all free blocks in the free list are marked as free, and 
+ * that navigating in block order results in ending at the end block before reaching the end of the heap
  */
-int32 kverify_heap(FailBehavior behavior);
+int32 kverify_heap(void);
 
 
 
