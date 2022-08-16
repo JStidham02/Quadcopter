@@ -5,7 +5,7 @@
 #define __INTERRUPTS
 
 
-typedef enum HandlerType{
+typedef enum ExceptionNumberType{
 	TOS = 0,
 	Reset = 1,
 	NMI = 2,
@@ -71,7 +71,7 @@ typedef enum HandlerType{
 	Resv10 = 62,
 	SPIM3 = 63,
 	TOTAL_VECTORS = 64
-} HandlerType;
+} ExceptionNumberType;
 
 
 
@@ -140,19 +140,32 @@ extern void kset_fault_mask(void);
 extern void kclear_fault_mask(void);
 
 
-
 /**
- * Given a HandlerType enumeration of the interrupt, this function
+ * Given a ExceptionNumberType enumeration of the interrupt, this function
  * sets the interrupt enable bit for the requested interrupt
  */
-void kenable_interrupt(HandlerType exception_num);
+void kunmask_interrupt(ExceptionNumberType exception_num);
+
 
 /**
- * Given a HandlerType enumeration of the interrupt, this function
+ * Given a ExceptionNumberType enumeration of the interrupt, this function
  * sets the interrupt enable bit for the requested interrupt
  * in the NVIC. Does not apply to system exceptions 
  */
-void kenable_interrupt(HandlerType exception_num);
+void kmask_interrupt(ExceptionNumberType exception_num);
+
+
+/**
+ * This function, given an exception number, sets that exception to pending
+ */
+void kset_interrupt_pending(ExceptionNumberType exception_num);
+
+/**
+ * This function, given an exception number clears that exceptions pending bit
+ */
+void kclear_interrupt_pending(ExceptionNumberType exception_num);
+
+
 
 
 /**
@@ -167,7 +180,7 @@ void kreturn_from_exception(void);
  * 
  * This function should not be called until kinit_interrupts has been called
  */
-void kregister_exception_handler(HandlerType handler_number, void *handler, int32 priority);
+void kregister_exception_handler(ExceptionNumberType handler_number, void *handler, uint8 priority);
 
 
 /**
@@ -177,7 +190,7 @@ void kregister_exception_handler(HandlerType handler_number, void *handler, int3
  * System Handler Priority registers, otherwise is is set in the NVIC registers
  * 
  */
-void kset_exception_priority(HandlerType int_num);
+void kset_exception_priority(ExceptionNumberType exception_num, uint32 priority);
 
 
 /**

@@ -11,16 +11,13 @@ void _start(void){
 	if(return_status != 0){
 		kforce_log_error("kinit_heap", return_status, 0, 0);
 	}
-
+	//base priority ignored
 	kset_base_priority(0);
+	// PRIMASK disabled
 	kunmask_exceptions();
-
+	// set VTOR to point to new exception table
 	kinit_exception_table();
-
-
-
-
-
+	
 
 	
 	while(1);
